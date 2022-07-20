@@ -167,7 +167,7 @@ export default function Home() {
              
             {tokenbalance ? 
                         ownedMusic.map((data) => (
-                         <AudioPlayer autoPlay src={getUri(data)} onPlay={e => console.log("onPlay")} />
+                         <AudioPlayer key={data} autoPlay src={getUri(data)} onPlay={e => console.log("onPlay")} />
                         )) 
 
                          :
