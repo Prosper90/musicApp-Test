@@ -32,12 +32,12 @@ export default function Home() {
   const getContract = async () => {
     console.log("bad guy called");
     const signer = await provider.getSigner();
-    return new ethers.Contract(contractAddress, ABI, signer);
+    return new Ethers.Contract(contractAddress, ABI, signer);
   }
 
 
   const setUp = async () => {
-    const exprovider = await new ethers.providers.Web3Provider(window.ethereum);
+    const exprovider = await new Ethers.providers.Web3Provider(window.ethereum);
     setProvider(exprovider);
     console.log(provider);
     console.log(ABI);
