@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from "../styles/Home.module.css"
-
+import { ethers } from "ethers";
+import React, { useEffect, useState } from 'react';
+import ABI from "../components/ABI.json";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 
 export default function Home() {
  
