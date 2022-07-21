@@ -10,7 +10,6 @@ import "react-h5-audio-player/lib/styles.css";
 export default function Home() {
  
 
-
   const [provider, setProvider] = useState();
   const [ready, setready] = useState(false);
   const [accountReady, setaccountReady] = useState("");
@@ -55,7 +54,7 @@ export default function Home() {
     const accounts = await ethereum.request({ method: "eth_requestAccounts", });
     setaccountReady(accounts[0]);
     setready(true);
-    console.log(accounts[0]);
+    console.log(accounts[0], "hi");
 
   }
   
