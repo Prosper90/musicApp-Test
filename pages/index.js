@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from "../styles/Home.module.css"
-import { Ethers } from "Ethers";
+import { ethers } from "ethers";
 import React, { useEffect, useState } from 'react';
 import ABI from "../components/ABI.json";
 import AudioPlayer from "react-h5-audio-player";
@@ -31,12 +31,12 @@ export default function Home() {
   const getContract = async () => {
     console.log("bad guy called");
     const signer = await provider.getSigner();
-    return new Ethers.Contract(contractAddress, ABI, signer);
+    return new ethers.Contract(contractAddress, ABI, signer);
   }
 
 
   const setUp = async () => {
-    const exprovider = await new Ethers.providers.Web3Provider(window.ethereum);
+    const exprovider = await new ethers.providers.Web3Provider(window.ethereum);
     setProvider(exprovider);
     console.log(provider);
     console.log(ABI);
@@ -54,7 +54,7 @@ export default function Home() {
     const accounts = await ethereum.request({ method: "eth_requestAccounts", });
     setaccountReady(accounts[0]);
     setready(true);
-    console.log(accounts[0], "hi");
+    console.log(accounts[0]);
 
   }
   
