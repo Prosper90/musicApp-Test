@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import styles from "../styles/Mintpage.module.css";
 import WalletSection from 'components/WalletSection';
 import Navigation from 'components/Navigation';
@@ -18,7 +18,7 @@ export default function mintpage(props) {
 
 
       //context
-      const { sections, setSections } = React.useContext(Contexts);
+      const { sections, setSections } = useContext(Contexts);
 
 
     useEffect(() => {

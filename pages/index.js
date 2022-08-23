@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from "../styles/Home.module.css"
 import { ethers } from "ethers";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import ABI from "../components/ABI.json";
 import Typography from '@mui/material/Typography';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -13,7 +13,7 @@ export default function Home(props) {
 
 
     //context
-    const { sections, setSections } = React.useContext(Contexts);
+    const { sections, setSections } = useContext(Contexts);
  
 
   useEffect(() => {
