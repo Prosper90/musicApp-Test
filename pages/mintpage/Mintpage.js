@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import styles from "../styles/Mintpage.module.css";
+import styles from "../../styles/Mintpage.module.css";
 import WalletSection from 'components/WalletSection';
 import Navigation from 'components/Navigation';
 import { Box, Typography } from '@mui/material';
@@ -10,6 +10,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import PanoramaIcon from '@mui/icons-material/Panorama';
 import LinkIcon from '@mui/icons-material/Link';
 import Contexts from 'components/context/contextclass';
+
 
 
 
