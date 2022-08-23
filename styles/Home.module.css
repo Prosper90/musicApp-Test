@@ -1,116 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Inter:wght@500&family=Poppins:wght@500&family=Roboto:wght@500&family=Sora:wght@500&family=Space+Grotesk:wght@500&display=swap');
+
 .container {
   padding: 0 2rem;
+  color: #E6E8EC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+
+.firstlayercontainer {
+  color: #E6E8EC;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  z-index: 1;
+}
+
+.secondlayercontainer {
+  margin-bottom: 25px;
+  width: 70%;
+}
+
+
+.illustrationcontain {
+  width: 36%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustrationcontain img {
+  width: 100%;
+  height: auto;
+}
+
+.icon {
+  font-size: 1.1rem !important;
+}
+
+
+
+.welcomecontainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  line-height: 49px;
+  /*margin-left: 200px;*/
+  width: 55%;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
+.welcomecontainer h1 {
+  font-size: 53px;
   margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  padding: 0;
 }
 
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.welcomecontainer button {
+  background-color: #2C2D31;
+  border: none;
+  outline: none;
+  width: 122px;
+  height: 42px;
+  border-radius: 2px;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  color: #E6E8EC;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+
+.img {
+  width: 100%;
+  height: auto;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.overlay {
+  display: none;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+
+@media screen and (max-width: 934px ) {
+  .illustrationcontain{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 50%;
+    width: 50%;
+    z-index: -1;
   }
+
+
+  .illustrationcontain .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  rgb(16,16,18, 354.7);
+  }
+
+
+  .illustrationcontain img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+
+
+  .welcomecontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 49px;
+    /*margin-left: 200px;*/
+    width: 55%;
+    margin-top: 212px;
+  }
+
+
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 700px ) {
+
+  .welcomecontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 49px;
+    /*margin-left: 200px;*/
+    width: 74%;
+  }
+  
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 557px ) {
+
+  .welcomecontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 49px;
+    /*margin-left: 200px;*/
+    width: 100%;
+  }
+  
+
+}
+
+
+
+
+@media screen and (max-width: 557px ) {
+
+
+  .welcomecontainer h1 {
+    font-size: 37px;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .secondlayercontainer {
+    margin-bottom: 25px;
+    width: 100%;
+    margin-top: 35px;
+  }
+  
+  
+  
+
 }

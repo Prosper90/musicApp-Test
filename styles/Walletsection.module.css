@@ -1,0 +1,109 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    color: #FFFFFF;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.othersection {
+    width: 66%;
+    display: flex;
+    justify-content: flex-end;
+    height: 45px;
+    align-items: center;
+}
+
+
+
+
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 5%);
+    height: 36px;
+    border-radius: 4px;
+    padding: 3px 0 3px 12px;
+
+}
+
+.input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+
+
+.othersection .connectwallet {
+    height: 35px;
+    width: 108px;
+    background: #553CDF;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    margin: 0 35px;
+}
+
+
+.othersection .walletbalance {
+    width: 93.21px;
+    height: 30px;
+    background: #2C2D31;
+    margin: 0 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.holdimgicon {
+    margin: 0 8px 0 2px;
+    padding-top: 3px;
+    width: 31.75px;
+    height: 24px;
+    background: #1D1E22;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.holdwalletamount {
+   font-size: 13px;
+}
+
+
+.othersection .walletlogo {
+
+}
+
+
+@media screen and (max-width: 531px) {
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 30px 0 30px;
+        color: #FFFFFF;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+
+    .othersection {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        height: 45px;
+        align-items: center;
+    }
+    
+    
+
+}
