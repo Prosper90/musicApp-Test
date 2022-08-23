@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import styled from 'styled-components';
@@ -8,6 +8,8 @@ import Navigation from 'components/Navigation';
 import WalletSection from 'components/WalletSection';
 import styles from "../../styles/Layout.module.css";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useRouter } from 'next/router';
+import Contexts from 'components/context/contextclass';
 
 
 
@@ -24,10 +26,20 @@ width: 100%;
 export default function layout({children}) {
 
   const responsiveMobile = useMediaQuery('(max-width: 770px)');
-  const [sections, setSections] = useState(true);
+  const [sections, setSections] = useState(false);
+  const router = useRouter()
+
+
+
+
+  useEffect(() => {
+    console.log("Ran");
+  }, [sections]);
 
 
   return (
+
+    <Contexts.Provider value = { { sections, setSections, } }>
 
           <Grid className={styles.container} container spacing={1}>
 
@@ -58,7 +70,7 @@ export default function layout({children}) {
              
             <Header />
 
-            <Children> { children } </Children>
+            <Children > { children } </Children>
 
           </Grid>
 
@@ -77,6 +89,9 @@ export default function layout({children}) {
 
 
           </Grid>
+
+
+    </Contexts.Provider>
 
 
   )

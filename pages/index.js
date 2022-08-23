@@ -6,11 +6,21 @@ import React, { useEffect, useState } from 'react';
 import ABI from "../components/ABI.json";
 import Typography from '@mui/material/Typography';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Contexts from 'components/context/contextclass';
 
-export default function Home() {
+export default function Home(props) {
+
+
+
+    //context
+    const { sections, setSections } = React.useContext(Contexts);
  
 
+  useEffect(() => {
 
+       setSections(false);
+
+  })
 
 
   return (

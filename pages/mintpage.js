@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from "../styles/Mintpage.module.css";
 import WalletSection from 'components/WalletSection';
 import Navigation from 'components/Navigation';
@@ -9,10 +9,27 @@ import AlbumIcon from '@mui/icons-material/Album';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import PanoramaIcon from '@mui/icons-material/Panorama';
 import LinkIcon from '@mui/icons-material/Link';
+import Contexts from 'components/context/contextclass';
 
 
 
-export default function mintpage() {
+export default function mintpage(props) {
+
+
+
+      //context
+      const { sections, setSections } = React.useContext(Contexts);
+
+
+    useEffect(() => {
+
+          setSections(true);
+
+
+    })
+
+
+
   return (
     <Box  className={styles.container}>
 
@@ -90,3 +107,6 @@ export default function mintpage() {
     </Box >
   )
 }
+
+
+
