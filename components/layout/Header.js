@@ -25,9 +25,9 @@ export default function Header() {
 
         <div className={styles.linkContainer}>
 
-              <Link  href="/marketplace"><a className={styles.linkstyle}> Marketplace </a></Link>
-              <Link  href="/mintpage"><a className={styles.linkstyle}> Post Music </a></Link>
-              <Link  href="/app"><a className={styles.linkstyle}> App </a></Link>
+              <Link  href="/Marketplace"><a className={styles.linkstyle}> Marketplace </a></Link>
+              <Link  href="/Mintpage"><a className={styles.linkstyle}> Post Music </a></Link>
+              <Link  href="/App"><a className={styles.linkstyle}> App </a></Link>
 
 
 
