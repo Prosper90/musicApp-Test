@@ -1,0 +1,9 @@
+.marketcontainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 40px;
+    font-family: 'Space Grotesk', sans-serif;
+}

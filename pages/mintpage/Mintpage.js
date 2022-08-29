@@ -10,6 +10,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import PanoramaIcon from '@mui/icons-material/Panorama';
 import LinkIcon from '@mui/icons-material/Link';
 import Contexts from 'components/context/contextclass';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 
 
@@ -18,8 +19,8 @@ export default function Mintpage(props) {
 
 
 
-      //context
-      const { sections, setSections } = useContext(Contexts);
+    //context
+    const { sections, setSections } = useContext(Contexts);
 
 
     useEffect(() => {
@@ -27,7 +28,7 @@ export default function Mintpage(props) {
           setSections(true);
 
 
-    })
+    });
 
 
 
@@ -49,7 +50,7 @@ export default function Mintpage(props) {
                 </div>
 
                 <div className={styles.inputform}>
-                  <LinkIcon /> <input  className={styles.input} placeholder="Uris"  />
+                  <LinkIcon /> <input  className={styles.input} placeholder="Urls"  />
                 </div>
 
                 <div className={styles.inputform}>
@@ -77,16 +78,23 @@ export default function Mintpage(props) {
 
             <form className={styles.form}>
 
-                <div className={styles.inputform}>
+              <div className={styles.containtwo}>
+
+                <div className={styles.inputformsecond}>
+                  <ContentCopyIcon /> <input  className={styles.input} placeholder="Copies"  />
+                </div>
+                <div className={styles.inputformsecond}>
                   <HeadphonesIcon /> <input  className={styles.input} placeholder="Music Name"  />
                 </div>
+
+             </div>
 
                 <div className={styles.inputform}>
                   <HeadphonesIcon /> <input  className={styles.input} placeholder="Artist"  />
                 </div>
 
                 <div className={styles.inputform}>
-                  <LinkIcon /> <input  className={styles.input} placeholder="Uri"  />
+                  <LinkIcon /> <input  className={styles.input} placeholder="Url"  />
                 </div>
 
                 <div className={styles.inputform}>

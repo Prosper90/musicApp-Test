@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+
+
+
+.listallcontainer {
+    border-radius: 10px;
+    height: 205px;
+    background: #211F27;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: #FFFFFF;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+
+.buttonlist {
+    height: 43px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1px solid;
+    border-image: linear-gradient(270.24deg, #40C9FF -1.44%, #E81CFF 99.82%) 1;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+
+
+.listoneinfo {
+    background: #211F27;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 16px 20px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+.priceandname {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.priceandname .musicImage {
+    width: 20%;
+    height: auto;
+}
+
+
+.infocontain {
+    width: 50%;
+}
+
+
+
+.pricecontain {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.pricecontain div {
+    margin-left: 8px;
+}
+
+.type {
+    text-align: center;
+}
+
+
+.listbutton {
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: linear-gradient(270.24deg, #40C9FF -1.44%, #E81CFF 99.82%);
+}
+
+

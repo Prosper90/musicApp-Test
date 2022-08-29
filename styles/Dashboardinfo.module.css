@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 174px;
+}
+
+
+
+.holdsalesinfo {
+    display: flex;
+    justify-content: space-around;
+    color: #FFFFFF;
+}
+
+
+.totalinfos {
+    background: #211F27;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 14px;
+    width: 22%;
+    padding: 10px;
+}
+
+
+.accountinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.ownedassets {
+    display: flex;
+    justify-content: space-around;
+    color: #FFFFFF;
+}
+
+
+.albums {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+    width: 45%;
+}
+
+
+.singles {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+    width: 45%;
+}
+
+
+
+.songslistcontainer {
+    background: #211F27;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 84px;
+    font-size: 12px;
+}
+
+
+
+.songinfo {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+
+.songinfoothers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3px;
+}
+
+
+
+.singer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+
+
+.pricecontain {
+    background: #18181C;
+    box-shadow: 4px 4px 20px -10px rgb(0 0 0 / 10%);
+    border-radius: 12px;
+    width: 60%;
+    height: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 11px;
+}
+
+
+.imagecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 25%;
+    background: linear-gradient(132.49deg, rgba(240, 235, 234, 0.25) 5.69%, rgba(255, 255, 255, 0.25) 5.69%, rgba(240, 235, 234, 0.24) 86.04%);
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+}
+
+
+
+.imagecontainer img {
+    width: 50%;
+    height: auto;
+}

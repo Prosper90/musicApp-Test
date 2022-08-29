@@ -19,6 +19,26 @@
     gap: 35px;
 }
 
+.containtwo {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.inputformsecond {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px 0px 3px 12px;
+    width: 47%;
+    gap: 20px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+
+
 .inputform {
     display: flex;
     flex-direction: row;

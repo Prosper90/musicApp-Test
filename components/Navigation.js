@@ -3,6 +3,8 @@ import styles from "../styles/Navigation.module.css";
 import HomeIcon from '@mui/icons-material/Home';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import Link from 'next/link';
 
 
 export default function Navigation() {
@@ -13,11 +15,24 @@ export default function Navigation() {
 
     <div className={styles.container}>
 
+
+
          <div className={styles.iconscontains}>
-             <HomeIcon className={styles.icons} />
-             <LibraryMusicIcon className={styles.icons} />
-             <LocalGroceryStoreIcon className={styles.icons} />
+
+             <Link  href="/"><a><HomeIcon className={styles.icons} /></a></Link>
+
+             <Link  href="/mintpage/Mintpage"><a><LibraryMusicIcon className={styles.icons} /></a></Link>
+
+             <Link  href="/marketplace/Marketplace"><a><LocalGroceryStoreIcon className={styles.icons} /></a></Link>
+
          </div>
+
+
+         <div className={styles.dashboard}>
+             <Link  href="/dashboard/Dashboard"><a><DashboardIcon className={styles.icons} /></a></Link>
+         </div>
+
+
 
     </div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "../styles/Walletsection.module.css";
 import SearchIcon from '@mui/icons-material/Search';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import PersonIcon from '@mui/icons-material/Person';
 
 export default function WalletSection() {
 
@@ -27,7 +28,7 @@ export default function WalletSection() {
 
 
         <div className={styles.othersection}>
-           <button className={styles.connectwallet} >Connect</button>
+           <button className={styles.connectwallet} > <div>Connect</div> <PersonIcon className='wallet-connectIcon' /> </button>
 
            <div className={styles.walletbalance} >
 

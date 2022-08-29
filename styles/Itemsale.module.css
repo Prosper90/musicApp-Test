@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 139px;
+}
+
+
+.itemforsale {
+    display: flex;
+    color: #FFFFFF;
+    background: #211F27;
+    border-radius: 10px;
+    width: 85%;
+    height: 279px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+.imgcontainer {
+    width: 86%;
+    height: 88%;
+    border-radius: 15px;
+    background: linear-gradient(132.49deg, rgba(240, 235, 234, 0.25) 5.69%, rgba(255, 255, 255, 0.25) 5.69%, rgba(240, 235, 234, 0.24) 86.04%);
+    backdrop-filter: blur(40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.shadow {
+    background: rgba(29, 30, 34, 0.42);
+    border-radius: 100%;
+}
+
+
+.info {
+    width: 45%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+
+.songname {
+    background: #18181C;
+    box-shadow: 4px 4px 20px -10px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    height: 39px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+.singer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.singername {
+    padding-top: 8px;
+    margin: 0 5px;
+}
+
+
+
+.details {
+    font-size: 10px;
+}
+
+
+
+.releasedate{
+    font-size: 10px;
+}
+
+
+
+.othersfrommarket {
+    width: 100%;
+}
