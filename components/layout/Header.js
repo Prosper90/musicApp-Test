@@ -26,7 +26,7 @@ export default function Header() {
    const { address, setAddress, provider, setProvider, setOpen, setSeverity, setNotificationMessage } = useContext(Contexts);
    const router = useRouter();
 
-   const [checkchain, setcheckchain] = useState(false);
+   const [checkaccess, setcheckaccess] = useState(false);
    const [instanceset, setInstanceset] = useState();
    const [webModal, setWebModal] = useState();
    const [windoweth, setWindoweth] = useState();
@@ -118,7 +118,7 @@ export default function Header() {
                         }],
                     });
         
-                    setcheckchain(true);
+                    setcheckaccess(true);
                     loginmetamask();
                   } catch (error) {
                     if (error === 4902) {
@@ -144,12 +144,12 @@ export default function Header() {
                         ],
                       });
         
-                      setcheckchain(true);
+                      setcheckaccess(true);
                       loginmetamask();
                     }
                   }
                 } else if (chainId.chainId === chainID) {
-                  setcheckchain(true);
+                  setcheckaccess(true);
                 }
         
         
@@ -164,7 +164,7 @@ export default function Header() {
             if(provider){
       
       
-              if(!address) {
+              if(!checkaccess) {
                 console.log("run");
                 updateAccount();
               } 
@@ -286,8 +286,8 @@ export default function Header() {
 
                   
 
-                      <div  onClick={ () => goback("/marketplace/Marketplace") }><a className={styles.linkstyle}> Artists </a></div>
-                      <div  onClick={ () => goback("/mintpage/Mintpage") }><a className={styles.linkstyle}> Music </a></div>
+                      <div  onClick={ () => goback("/App") }><a className={styles.linkstyle}> Artists </a></div>
+                      <div  onClick={ () => goback("/App") }><a className={styles.linkstyle}> Music </a></div>
                       <div  onClick={ () => goback("/App") }><a className={styles.linkstyle}> Hot trend </a></div>
                       <div  onClick={ () => goback("/App") }><a className={styles.linkstyle}> Top charts </a></div>
                       <div  onClick={ () => goback("/App") }><a className={styles.linkstyle}> Whats new </a></div>
