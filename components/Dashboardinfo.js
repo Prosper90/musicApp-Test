@@ -170,7 +170,7 @@ export default function Dashboardinfo(props) {
 
                                   { props.ownedSingles.map((data, index) => (
 
-                                    <div className={styles.songslistcontainer}>
+                                    <div className={styles.songslistcontainer} key={index} >
 
 
                                                 <div className={styles.imagecontainer}>
