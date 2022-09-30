@@ -14,11 +14,13 @@ export default function Navigation() {
 
   const responsiveMobile = useMediaQuery('(max-width: 770px)');
 
+  const responsiveMobiletwo = useMediaQuery('(max-width: 550px)');
+
 
 
   return (
 
-    <div className={ styles.container}>
+    <div className={ styles.container }>
 
 
 
