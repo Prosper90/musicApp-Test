@@ -4,7 +4,16 @@ import createEmotionCache from '../src/createEmotionCache';
 import { CacheProvider } from '@emotion/react';
 
 
-function MyApp({ Component, pageProps }) {
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache();
+
+
+function MyApp(props) {
+
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
+
+
   return(
     <CacheProvider value={emotionCache}>
 
