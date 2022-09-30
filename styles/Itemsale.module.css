@@ -84,12 +84,27 @@
 
 
 
+
+
 .releasedate{
     font-size: 10px;
 }
 
 
 
+
+
+
 .othersfrommarket {
     width: 100%;
+}
+
+
+
+
+
+.itemforsaleimg {
+    width: 73%;
+    height: auto;
+    border-radius: 10px;
 }

@@ -7,13 +7,25 @@ import ABI from "../components/ABI.json";
 import Typography from '@mui/material/Typography';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Contexts from 'components/context/contextclass';
+import Notification from 'components/Notification';
 
 export default function Home(props) {
 
 
 
     //context
-    const { sections, setSections } = useContext(Contexts);
+    const { sections, setSections, open, severity, notificationMessage, setOpen } = useContext(Contexts);
+
+
+    const handleClose = (event, reason) => {
+      if (reason === 'clickaway') {
+        return;
+      }
+  
+      setOpen(false);
+    };
+
+
  
 
   useEffect(() => {
@@ -29,8 +41,8 @@ export default function Home(props) {
         <div className={styles.firstlayercontainer}>
 
               <div className={styles.welcomecontainer}>
-                  <Typography variant="h1" gutterBottom>DISCOVER AND BUY MUSIC FOR LIFE</Typography>
-                  <Typography variant="overline" display="block" gutterBottom>Get amazing music from the  artists near you, with our nfts </Typography>
+                  <Typography variant="h1" gutterBottom>Truly Decentralized Music</Typography>
+                  <Typography variant="overline" display="block" gutterBottom> Music connect, Blockchain Melody, Rythm & game </Typography>
                   <button>Get Started <ArrowForwardIosIcon className={styles.icon} /> </button>
               </div>
 
@@ -47,6 +59,10 @@ export default function Home(props) {
         <div className={styles.secondlayercontainer}>
             <img className={styles.img} src="/mainone.png" />
         </div>
+
+
+        
+  <Notification open={open} handleClose={handleClose} severity={severity} notificationMessage={notificationMessage} />
 
 
     </div> 

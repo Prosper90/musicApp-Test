@@ -109,7 +109,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 101px;
+        margin-top: 26px;
+        padding-top: 555px;
+        overflow-y: scroll;
+        height: 622px;
+        gap: 53px;
     }
 
     

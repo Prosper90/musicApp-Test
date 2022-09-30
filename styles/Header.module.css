@@ -6,11 +6,18 @@
 }
 
 
+
+
+
 .connectButton {
-    width: 14%;
+    width: 30%;
     height: 31px;
     margin-left: 56px; 
 }
+
+
+
+
 
 
 .connectButton button {
@@ -21,7 +28,50 @@
     outline: none;
     border-radius: 4px;
     color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.logoContainer small {
+    padding: 10px;
+}
+
+
+
+
+.eachsectioncover {
+    display: flex;
+    padding: 26px 20px 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+
+.eachsectioncovertwo {
+    display: flex;
+    padding: 3px 20px 3px 20px;
+    justify-content: space-around;
+    align-items: center;
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    font-size: 15px;
+}
+
+
 
 
 
@@ -30,15 +80,39 @@
     .connectButton {
         width: 25%;
         height: 31px;
+        margin: 0px;
     }
 
 
     .linkContainer {
-        width: 70%;
+        width: 100%;
         display: flex;
         justify-content: space-around;
+        font-size: 10px;
+        align-items: center;
+        margin: 0px;
     }
-    
+
+
+
+
+
+    .eachsectioncovertwo {
+        display: flex;
+        padding: 7px 20px 7px 20px;
+        justify-content: space-around;
+        align-items: center;
+        color: #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+        font-size: 10px;
+    }
+
+
+
+    .logoContainer small {
+        padding: 20px 0px 0px 0px;
+        font-size: 8px;
+    }
     
   
   }

@@ -10,6 +10,8 @@ import styles from "../../styles/Layout.module.css";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useRouter } from 'next/router';
 import Contexts from 'components/context/contextclass';
+import Notification from 'components/Navigation'
+import Navigationmobile from "../Navigationmobile";
 
 
 
@@ -27,7 +29,15 @@ export default function Layout({children}) {
 
   const responsiveMobile = useMediaQuery('(max-width: 770px)');
   const [sections, setSections] = useState(false);
-  const router = useRouter()
+  const [address, setAddress] = useState("");
+  const [provider, setProvider] = useState({});
+  const router = useRouter();
+
+  const [open, setOpen] = useState(false);
+  const [severity, setSeverity] = useState("");
+  const [notificationMessage, setNotificationMessage] = useState("");
+
+
 
 
 
@@ -39,9 +49,9 @@ export default function Layout({children}) {
 
   return (
 
-    <Contexts.Provider value = { { sections, setSections, } }>
+    <Contexts.Provider value = { { sections, setSections, address, setAddress, provider, setProvider, setOpen, setSeverity, setNotificationMessage, open, severity, notificationMessage } }>
 
-          <Grid className={styles.container} container spacing={1}>
+          <Grid className={  styles.container } container spacing={1}>
 
        
 
@@ -50,13 +60,27 @@ export default function Layout({children}) {
              <div></div>
 
             :
+            <>
+              { responsiveMobile ? 
+              
+                <div className={styles.mobilenavigate} >
+                    <Navigationmobile  />
+                </div>
+
+              :
+
+                <Grid item xs={ 0.8 } className={ responsiveMobile ? styles.remove : styles.leftsection} >
+
+                  <Navigation  />
+
+                </Grid>
+            
+              }
+
+           </>
 
            
-              <Grid item xs={ responsiveMobile ? 1.5 : 0.8 } className={styles.leftsection} >
 
-                <Navigation  />
-
-              </Grid>
           }
 
             
@@ -77,12 +101,11 @@ export default function Layout({children}) {
 
           :
 
-            <Grid item xs={ responsiveMobile ? 10.5 : 11.2}>
+            <Grid item xs={ responsiveMobile ? 12 : 11.2}>
              
                 <WalletSection />
 
                 <Children> { children } </Children>
-
             </Grid>
 
           }

@@ -1,0 +1,14 @@
+.container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #18181C;
+    width: 100%;
+    /* display: flex; */
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    color: #FFFFFF;
+    display: flex;
+}

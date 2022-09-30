@@ -9,13 +9,18 @@ export default function Marketplace() {
 
 
   //context
-  const { sections, setSections } = useContext(Contexts);
+  const { sections, setSections, address, provider } = useContext(Contexts);
 
   useEffect(() => {
 
       setSections(true);
 
-  })
+      if(!provider) {
+        alert("Please connect your wallet to access market");
+      }
+      
+
+  }, []);
 
 
   return (
