@@ -1,15 +1,22 @@
-import React, { useEffect, useState, useContext, Suspense } from 'react';
+import React, { useEffect, useState, useContext, useRef } from 'react';
 import styles from "../styles/Albummarket.module.css";
 import Contexts from './context/contextclass';
 import { ethers } from "ethers";
 import { contractaddress, contractABI, chainID } from "./utils/constants";
 import { useRouter } from 'next/router';
+import { id } from 'ethers/lib/utils';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+
+
 
 export default function Albummarket() {
 
     const { address, setAddress, provider } = useContext(Contexts);
-    const [albumsmarket, setAlbumsMarket] = useState([]);
-    const router = useRouter()
+    const [albummarket,  setAlbumMarket] = useState([]);
+    const [albumlisted, setAlbumlisted] = useState([]);
+    const router = useRouter();
+
+
 
             /* global BigInt */
 
@@ -27,32 +34,58 @@ export default function Albummarket() {
 
 
 
+      const checkforrepeat = (id) => {
+        
+        console.log(id);
+        if(albumlisted.length === 0){
+           return false;
+        }
 
+        albumlisted.map((data, index) => {
+           console.log(data);
+           if(data[0].id === id) {
+               return true;
+           } else {
+               return false;
+           }
+
+        })
+
+    }
+
+      
+
+
+      
       const getalbumsid = async () => {
-
-
 
         const contract = await getContract();
         const getalbums = await contract.getAllId();
-        console.log(getalbums);
-        const albumsarrfill = [];
-
-        getalbums.map(async(data) => {
+          setAlbumMarket(getalbums);
+          const arr = [];
+         
+          await getalbums.map( async (data, index) => {
 
             let value = data.split(',');
             const idOne = parseInt(value[0]);
             const idTwo = parseInt(value[1]);
-            const album = await contract.getAlbum(idOne, idTwo);
+            const geteachalbum = await contract.getAlbum(idOne, idTwo);
+            console.log(geteachalbum);
+            //const avoidrepeat = checkforrepeat(geteachalbum[0].id);
+            //console.log(avoidrepeat);
+            
+            if(geteachalbum[0].sale){
+                arr.push(geteachalbum);
+            }
 
-            //const eachalbum = await getAlbums(data);
-            albumsarrfill.push(album);
+        
+          })
 
-        })
-
-        setAlbumsMarket(albumsarrfill);
-        console.log(albumsmarket);
-
-
+          setTimeout(() => {
+            console.log("All wrapped up setTimeOut market");
+            setAlbumlisted(arr);
+          }, 3000);
+          
 
     }
 
@@ -60,15 +93,10 @@ export default function Albummarket() {
 
 
 
+  const purchase = (selectedItem) => {
 
-
-
-
-
-  const purchase = (id) => {
-
-
-      router.push("/purchase/"+id);
+      console.log(selectedItem);
+      router.push("/purchase/"+selectedItem.id+"/"+selectedItem.musictype);
 
 
   }
@@ -82,39 +110,10 @@ export default function Albummarket() {
         
         const { ethereum } = window;
 
+            getalbumsid();
 
 
-
-   /*
-    const getAlbums = async (id) => {
-
-
-            //console.log("called here oooooo")
-            let value = id.split(',');
-            const idOne = parseInt(value[0]);
-            const idTwo = parseInt(value[1]);
-            const Contract = await getContract();
-            const album = await Contract.getAlbum(idOne, idTwo);
-            return album;
-
-
-
-    }
-
-   */
-
-      if(albumsmarket.length === 0){
-
-        getalbumsid();
-        console.log("inside useEffect");
-        console.log(albumsmarket);
-
-      }
-
-   
-
-
-    console.log("outside useEffect");
+        console.log(albumlisted);
 
     }, []);
 
@@ -137,65 +136,65 @@ export default function Albummarket() {
          <div className={styles.insidecontainer}>
 
 
-      {albumsmarket 
+      { albummarket.length !== 0
 
         ?
+          <>
+           { albumlisted.length !== 0 ?
 
-         albumsmarket.map((data, index) => {
+                albumlisted?.map((data, index) => (      
+                    
+                  <div className={styles.holder} key={index} onClick={ () => purchase(data[0]) } >
 
-        return( 
+                          <div className={styles.salecontainer}>
 
-                <div className={styles.holder} key={index} onClick={ () => purchase(data[0].id) }>
+                              <div className={styles.imagecontainer}>
+                                  <img src={data[0]?.imguri} alt='supposed image' />
+                              </div>
 
-                        <div className={styles.salecontainer}>
+                              <div className={styles.infocontainer}>
+                                  <div className={styles.musicname}>{data[0]?.songname}</div>
+                              </div>
 
-                            <div className={styles.imagecontainer}>
-                                <img src={data[0].imguri} alt='supposed image' />
-                            </div>
+                          </div>
 
-                            <div className={styles.infocontainer}>
-                                <div className={styles.musicname}>{data[0].songname}</div>
-                            </div>
+                          <div className={styles.otherinfo}>
 
-                        </div>
+                              <div className={styles.date}>
+                                  <div>Artist</div>
+                                  <div>{data[0]?.artist}</div>
+                              </div> 
 
+                              <div className={styles.price}>
+                                  <div>Price</div>
 
+                                  <div className={styles.pricecontain}>
+                                      <img src='/currencyimg.png'/>
+                                      <div> { Math.round( (data[0]?.cost/10 ** 18) * 10 ) / 10 } ETH</div>
+                                  </div>
 
+                              </div>
 
-
-                        <div className={styles.otherinfo}>
-
-                            <div className={styles.date}>
-                                <div>Artist</div>
-                                <div>{data[0].artist}</div>
-                            </div> 
-
-                            <div className={styles.price}>
-                                <div>Price</div>
-
-                                <div className={styles.pricecontain}>
-                                    <img src='/currencyimg.png'/>
-                                    <div> { BigInt(data[0].cost).toString() } ETH</div>
-                                </div>
-
-                            </div>
-
-                        </div>
+                          </div>
 
 
+                          <div className={styles.buyborder} > <ShoppingBagIcon fontSize="small" className={styles.icon} />  Place Bid</div>
 
 
-                    </div>
+                      </div> 
 
+                    ))
 
-                 )
+                    :
 
-                })
-
+                    <div> Market is empty </div>
+              }
+            
+            </>
 
          :
 
-         <div> No items for sale </div>
+         <div>No minted music</div>
    
 
       }

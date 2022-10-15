@@ -14,12 +14,59 @@
     background: #211F27;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 50px;
     color: #FFFFFF;
     font-family: 'Space Grotesk', sans-serif;
+    padding: 15px;
+    font-size: 13px;
 }
+
+
+
+
+.borrowform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 5%);
+    height: 36px;
+    border-radius: 4px;
+    padding: 3px 0px 3px 12px;
+}
+
+
+
+.inputborrow {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+    width: 100%;
+    font-size: 11px;
+}
+
+
+
+.submit {
+
+    height: 34px;
+    background: green;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+
+
+.currencysymb {
+    padding: 5px;
+    font-size: 12px;
+}
+
+
 
 
 
@@ -37,7 +84,7 @@
 
 
 .listoneinfo {
-    background: #211F27;
+    background: linear-gradient(156.67deg, rgba(112, 112, 114, 0.4) 0.07%, rgba(100, 97, 113, 0.148) 99.07%);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -56,8 +103,52 @@
 
 
 .priceandname .musicImage {
-    width: 20%;
+    width: 25%;
+    height: auto
+}
+
+
+.songname {
+    font-style: normal;
+    font-weight: 800;
+}
+
+
+.currencyimg {
+    width: 15%;
     height: auto;
+}
+
+
+.borrowheader {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+    padding-bottom: 5px;
+    /* font-weight: 100; */
+}
+
+
+.borrowin {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3px;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 15;
+    font-style: normal;
+}
+
+
+.bnbcurrency {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+.statusborrow {
+    padding-left: 24px;
 }
 
 
@@ -87,7 +178,10 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: linear-gradient(270.24deg, #40C9FF -1.44%, #E81CFF 99.82%);
+    /* background: linear-gradient(270.24deg, #40C9FF -1.44%, #E81CFF 99.82%); */
+    color: #FFFFFF;
+    background: none;
+    border: 1px solid #ffffff
 }
 
 
@@ -95,6 +189,21 @@
 
 
 /* Mobile */
+
+.modalcontainer {
+    width: 100%;
+    height: 100%;
+    /* background: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgb(0, 0, 0, 0.6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 .listallcontainermobile {
     border-radius: 10px;
@@ -123,7 +232,8 @@
 
 
 .listoneinfomobile {
-    background: #211F27;
+    /*background: #211F27;*/
+    background: linear-gradient(156.67deg, rgba(112, 112, 114, 0.5) 0.07%, rgba(100, 97, 113, 2) 99.07%);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -189,4 +299,38 @@
     position: absolute;
     background: rgb(0, 0, 0, 0.6);
     transform: translate(-50%, -50%);
+}
+
+
+
+.borrowtitle {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 580;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.typename {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+
+.boreded {
+    border: 1px solid #5E5C66;
+    border-radius: 4px;
+    color: #FFFFFF;
+    opacity: 0.7;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    height: 46px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    width: 239px;
 }

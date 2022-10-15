@@ -8,8 +8,10 @@ import { shortenAddress } from 'components/utils/trauncate';
 import { ethers } from "ethers";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import Web3Modal from "web3modal";
-import { chainID } from "components/utils/constants";
+import { chainID, currencytokenABI, currencyTokenaddress } from "components/utils/constants";
 import PersonIcon from '@mui/icons-material/Person';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 
@@ -33,6 +35,7 @@ export default function Header() {
    
  
    
+   const responsiveMobile = useMediaQuery('(max-width: 765px)');
  
 
 
@@ -54,6 +57,9 @@ export default function Header() {
 
 
 
+
+
+
   const setProviderWindow = async () => {
     const temporalProvider = await new ethers.providers.Web3Provider(window.ethereum);
     setProvider(temporalProvider);
@@ -69,10 +75,10 @@ export default function Header() {
         package: WalletConnectProvider, // required
         options: {
           rpc: {
-            3: "https://rpc.ankr.com/eth_ropsten/",
+            97: "https://data-seed-prebsc-2-s2.binance.org:8545",
           }, // required
-          network: 'ropsten',
-          chainId: 3,
+          network: 'bsc testnet',
+          chainId: 97,
         }
       },
     };
@@ -80,7 +86,7 @@ export default function Header() {
 
 
     const web3Modal = new Web3Modal({
-      network: "ropsten", // optional
+      network: "tBNB", // optional
       cacheProvider: true, // optional
       providerOptions, // required
     });
@@ -114,12 +120,13 @@ export default function Header() {
                       method: "wallet_switchEthereumChain",
                       params: [
                         {
-                          chainId: `0x${Number(3).toString(16)}`,
+                          chainId: `0x${Number(97).toString(16)}`,
                         }],
                     });
         
                     setcheckaccess(true);
                     loginmetamask();
+                    
                   } catch (error) {
                     if (error === 4902) {
                       //add the token or currency to metamask
@@ -127,7 +134,7 @@ export default function Header() {
                         method: "wallet_addEthereumChain",
                         params: [
                           {
-                            chainId: `0x${Number(3).toString(16)}`,
+                            chainId: `0x${Number(97).toString(16)}`,
                             rpcUrls: [
                               " https://data-seed-prebsc-1-s1.binance.org:8545",
                             ],
@@ -178,8 +185,7 @@ export default function Header() {
                 const accounts = await signer.getAddress();
       
                 setAddress(accounts);
-  
-      
+    
               } else {
                 // alert("Wrong Chain Switch");
                 updateAccount();
@@ -196,7 +202,30 @@ export default function Header() {
 
           const loginMobile = async () => {
 
-            const instance = await webModal.connect();
+
+            const providerOptions = {
+              walletconnect: {
+                package: WalletConnectProvider, // required
+                options: {
+                  rpc: {
+                    97: "https://testnet.bscscan.com/",
+                  }, // required
+                  network: 'bsc testnet',
+                  chainId: 97,
+                }
+              },
+            };
+        
+        
+        
+            const web3Modal = new Web3Modal({
+              network: "binance", // optional
+              cacheProvider: true, // optional
+              providerOptions, // required
+            });
+            
+
+            const instance = await web3Modal.connect();
 
             //setgetInstance(instance); for onchange event
             setInstanceset(instance);
@@ -213,7 +242,8 @@ export default function Header() {
                   const accounts = await signer.getAddress();
         
                   setAddress(accounts);
-
+                  //get balance
+                  getBalance();
 
              }
 
@@ -236,6 +266,7 @@ export default function Header() {
               setProviderWindow();
             }
 
+
           }, []);
 
 
@@ -255,7 +286,7 @@ export default function Header() {
       <div className={styles.eachsectioncover}>
 
             <div className={styles.logoContainer}> 
-                <h1> Streamify </h1>
+                <h1> Streamifi </h1>
               </div>
 
 
@@ -269,7 +300,29 @@ export default function Header() {
 
 
                     <div className={styles.connectButton}>
-                      <button onClick={ !windoweth ? loginMobile : loginmetamask } > <div> {address ? shortenAddress(address) : "Connect" } </div> <PersonIcon className= { styles.walletconnectIcon } /> </button>
+
+                      <button onClick={ !windoweth ? loginMobile : loginmetamask } > 
+                         { responsiveMobile ? 
+                           
+                           <div>
+
+                               { address ? shortenAddress(address)
+                                :
+                                 <AccountBalanceWalletIcon className={ styles.adjustwallet } />
+                                }
+
+                           </div>
+                           :
+                           
+                            <>
+                              <div> {address ? shortenAddress(address) : "Connect" } </div> 
+                              <PersonIcon className= { styles.walletconnectIcon } /> 
+                            </>
+                          }
+
+
+                          </button>
+
                     </div>
 
               </div>

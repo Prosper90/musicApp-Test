@@ -8,15 +8,22 @@ import Priceinfo from 'components/Priceinfo';
 import Contexts from 'components/context/contextclass';
 import { ethers } from 'ethers';
 import { contractaddress, contractABI, chainID } from "../../components/utils/constants";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Purchasemobile from 'components/Purchasemobile';
+
+
+
 
 
 export default function Purchasetokens(props) {
 
 
       //context
+      const responsiveMobile = useMediaQuery('(max-width: 765px)');
       const { sections, setSections, provider } = useContext(Contexts);
-      const [itemAlbum, setItemAlbum] = useState();
-      const [itemSingle, setItemSingle] = useState({});
+      const [itemselected, setItemselected] = useState([]);
+      const [albumorsingle, setAlbumorsingle] = useState("");
+
 
 
       const getContract = async () => {
@@ -36,21 +43,35 @@ export default function Purchasetokens(props) {
 
 
 
-      const getItem = async (ids) => {
+      const getItem = async (ids, type) => {
           
         if(provider) {
     
-            console.log("called here oooo purchase");
             let value = ids.split(',');
             const idOne = parseInt(value[0]);
             const idTwo = parseInt(value[1]);
             const Contract = await getContract();
-            const album = await Contract.getAlbum(idOne, idTwo);
+            
+            if(type == "Album"){
+              const getItem = await Contract.getAlbum(idOne, idTwo);
+              setItemselected(getItem);
+              console.log(getItem);
+              setAlbumorsingle("Album");
+            } else {
+              const getItem = await Contract.getSingles(idOne, idTwo);
+              setItemselected(getItem);
+              setAlbumorsingle("Single");
+            }
+
+
+
+            /*
             if(album.length > 1) {
               setItemAlbum(album);
             } else {
               setItemSingle(album);
             }
+            */
             //setItem(album);
     
         }
@@ -65,7 +86,7 @@ export default function Purchasetokens(props) {
   
             setSections(true);
 
-            getItem(props.itemId);
+            getItem(props.itemId, props.itemType);
   
   
       }, []);
@@ -73,23 +94,26 @@ export default function Purchasetokens(props) {
 
   return (
 
-    <Box  className={styles.container}>
+    <Box  className={ !responsiveMobile ? styles.container : styles.containertwo }>
 
-      <Grid container spacing={1}>
-    
+      {!responsiveMobile ? 
 
-        <Grid item xs={ 7 }>
-          <Itemsale itemAlbum={itemAlbum} itemSingle={itemSingle} />
-        </Grid>
-
+          <div className={styles.testingcontainer}>
+        
+                <Itemsale itemselected={itemselected} albumorsingle={albumorsingle} />
 
 
-        <Grid item xs={ 5 }>
-          <Priceinfo itemAlbum={itemAlbum} itemSingle={itemSingle} />
-        </Grid>
+                <Priceinfo itemselected={itemselected} albumorsingle={albumorsingle} />
 
 
-      </Grid>
+          </div>
+
+          :
+          
+
+           <Purchasemobile itemselected={itemselected} albumorsingle={albumorsingle} />
+
+      }
 
 
     </Box >
@@ -103,21 +127,29 @@ export default function Purchasetokens(props) {
 export async function  getServerSideProps(context) {
 
   const {params, query} = context;
-  const { Purchasetokens } = params;
+  const { Purchasetokens, musictype } = params;
+  //const {musictype} = query;
 
   console.log(params);
+  console.log(params.Purchasetokens[0], "checking");
 
-  console.log(Purchasetokens);
+  console.log(params.Purchasetokens[1], "firstTry");
 
-  const itemId = Purchasetokens;
+  //console.log(Purchasetokens);
+
+  const itemId = params.Purchasetokens[0];
+  const itemType = params.Purchasetokens[1];
 
   console.log(itemId);
+  console.log(itemType);
 
 
 
   return {
     props: {
       itemId : itemId,
+      itemType: itemType,
     }
   }
+  
 }

@@ -67,6 +67,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 
@@ -86,6 +87,16 @@
 
 
 .othersection .walletlogo {
+
+}
+
+
+
+.imagelogo {
+
+    width: 28px;
+    height: auto;
+    border-radius: 7px;
 
 }
 

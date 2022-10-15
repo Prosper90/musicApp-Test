@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext, useRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import DehazeIcon from '@mui/icons-material/Dehaze';
@@ -12,110 +12,145 @@ import { contractaddress, contractABI, chainID } from "../../components/utils/co
 
 
 export default function Purchasetokens() {
-
+     
 
       //context
       const responsiveMobile = useMediaQuery('(max-width: 765px)');
       const responsiveMainmobile = useMediaQuery('(max-width: 519px)');
-      const { sections, setSections, provider, setProvider, address, setAddress, setOpen, setSeverity, setNotificationMessage } = useContext(Contexts);
+      const {  setSections, address } = useContext(Contexts);
       const [ownedMusicAlbum, setOwnedMusicAlbum] = useState([]);
       const [ownedMusicSingle, setOwnedMusicSingle] = useState([]);
       const [ownedAlbums, setOwnedAlbums] = useState([]);
       const [ownedSingles, setOwnedSingles] = useState([]);
+      const [loading, setloader] = useState(false);
+      const [activate, setActivate] = useState(false);
+
+
+
 
               /* global BigInt */
-      const [runother, setRunother] = useState(false);
       const [select, setSelect] = useState();
+
+
+      const checkforrepeat = (id) => {
+        
+        console.log(id);
+        if(ownedAlbums.length === 0){
+           return false;
+        }
+
+        ownedAlbums.map((data, index) => {
+           console.log(data);
+           if(data[0].id === id) {
+               return true;
+           } else {
+               return false;
+           }
+
+        })
+
+    }
 
       
 
 
 
       const getContract = async () => {
-        console.log("bad guy called");
         const temporalProvider = await new ethers.providers.Web3Provider(window.ethereum);
         const signer = temporalProvider.getSigner();
         return new ethers.Contract(contractaddress, contractABI, signer);
       }
 
-
-
-      const getAlbum = async (id) => {
-        console.log("called here oooooo");
-        let value = id.split(',');
-        const idOne = parseInt(value[0]);
-        const idTwo = parseInt(value[1]);
-        const Contract = await getContract();
-        const album = await Contract.getAlbum(idOne, idTwo);
-        //console.log(album);
-        return album;
-      }
-
-
-
-      const getSingle = async (id) => {
-        console.log("called here oooooo");
-        let value = id.split(',');
-        const idOne = parseInt(value[0]);
-        const idTwo = parseInt(value[1]);
-        const Contract = await getContract();
-        const single = await Contract.getSingles(idOne, idTwo);
-        //console.log(single);
-        return single;
-      }
-
+      
 
 
       const getOwnedAlbums = async () => {
-        if(address) {
 
-          const Contract = await getContract();
-          const owned = await Contract.getUsersTokens(address);
-          const arr = [];
+        if(address) {
+          const contract = await getContract();
+          const owned = await contract.getUsersTokens(address);
+          //console.log(owned.length);
           setOwnedMusicAlbum(owned);
-          owned.map(async (data) => {
-             let eachalbum = await getAlbum(data);
-             //console.log(eachalbum);
-             arr.push(eachalbum);
-          })
-          //console.log(arr);
-          setOwnedAlbums(arr);
-          setRunother(true);
-
-        } else {
-          console.log("connect wallet");
-        }
-
-      }
-
-
-
-
-
-
-
-      const getOwnedSinges = async () => {
-        if(address) {
-
-          const Contract = await getContract();
-          const owned = await Contract.getUsersTokens(address);
           const arr = [];
-          setOwnedMusicSingle(owned);
-          owned.map(async (data) => {
-            //console.log(data);
-             let eachmusic = await getSingle(data);
-             //console.log(eachalbum);
-             arr.push(eachmusic);
-            // console.log(arr);
-          })
-          //console.log(arr); 
-          setOwnedSingles(arr);
+          
+
+          owned.map(async (data, index) => {
+
+            let value = data.split(',');
+            const idOne = parseInt(value[0]);
+            const idTwo = parseInt(value[1]);
+            const checkifalbumsexist = await contract.checkAlbum(idOne, idTwo);
+            const avoidrepeat = checkforrepeat(data);
+           
+            if(checkifalbumsexist) {
+              console.log("Album counting");
+              const album = await contract.getAlbum(idOne, idTwo);
+              if(!avoidrepeat) {
+                  
+                arr.push(album);
+              }
+            } else {
+              console.log("No albums")
+            }
+
+
+          });
+
+          setTimeout(() => {
+            console.log("All wrapped up setTimeOut");
+            setOwnedAlbums(arr);
+          }, 3000);
+
 
         } else {
           console.log("connect wallet");
         }
 
       }
+
+
+     
+
+
+
+    const getOwnedSinges = async () => {
+      if(address) {
+        const contract = await getContract();
+        const owned = await contract.getUsersTokens(address);
+        setOwnedMusicSingle(owned);
+        const arr = [];
+
+        owned.map(async (data, index) => {
+
+           let value = data.split(',');
+           const idOne = parseInt(value[0]);
+           const idTwo = parseInt(value[1]);
+           //console.log(value);
+           const checkifsinglesexist = await contract.checkSingle(idOne);
+
+           if(checkifsinglesexist) {
+                const eachmusic = await contract.getSingles(idOne, idTwo);
+                arr.push(eachmusic);
+           } else {
+             console.log("No singles")
+           }
+
+        
+        })
+
+        setTimeout(() => {
+          console.log("All wrapped up setTimeOut");
+          setOwnedSingles(arr);
+        }, 3000);
+
+        //setloader(true);   
+      } else {
+        console.log("connect wallet");
+      }
+    }
+
+
+
 
 
 
@@ -128,44 +163,32 @@ export default function Purchasetokens() {
             const { ethereum } = window;
             setSections(true);
 
-
-
-            if(ownedAlbums.length == 0) {
-
+    
+            if(ownedAlbums.length == 0){
               getOwnedAlbums();
-
             }
 
+            if(ownedSingles.length == 0) {
+              getOwnedSinges();
+            }
 
-              //getOwnedSinges();
-
-
-
-             // console.log("in in in in here");
-              //const arr = [];
-             
-              /*
-              ownedMusic.map( async (data) => {
-                //console.log(data);
-                 let eachalbum = await getAlbum(data);
-                 arr.push(eachalbum);
-              })
-              */
-
-              //console.log(arr);
-
-              //setOwnedAlbums(arr);
 
             console.log(ownedAlbums);
             console.log(ownedSingles);
 
-  
+
   
       }, []);
 
 
 
+
+
       const selectlist = (item) => {
+        if(responsiveMobile) {
+          console.log("calling activate");
+          setActivate(true);
+        }
         setSelect(item);
       }
 
@@ -184,14 +207,29 @@ export default function Purchasetokens() {
 
             <Grid item xs={ 8 }>
 
-              <Dashboardinfo responsiveMainmobile={responsiveMobile} ownedAlbums={ownedAlbums} ownedSingles={ownedSingles} ownedMusicAlbum={ownedMusicAlbum} ownedMusicSingle={ownedMusicSingle} selectlist={selectlist} />
+              <Dashboardinfo  
+                loading={loading}
+                setloader={setloader} 
+                responsiveMainmobile={responsiveMobile} 
+                ownedAlbums={ownedAlbums} 
+                ownedSingles={ownedSingles} 
+                ownedMusicAlbum={ownedMusicAlbum} 
+                ownedMusicSingle={ownedMusicSingle} 
+                selectlist={selectlist}
+                />
 
             </Grid>
     
     
     
             <Grid item xs={ 4 }>
-              <Itemsinfo select={select} responsiveMainmobile={responsiveMobile} />
+              <Itemsinfo  
+                loading={loading} 
+                select={select} 
+                responsiveMainmobile={responsiveMobile} 
+                activate={activate} 
+                setSelect={setSelect}  
+                />
             </Grid>
     
     
@@ -201,9 +239,24 @@ export default function Purchasetokens() {
 
           <Box>
 
-              <Dashboardinfo  responsiveMainmobile={responsiveMobile} ownedAlbums={ownedAlbums} ownedSingles={ownedSingles} ownedMusicAlbum={ownedMusicAlbum} ownedMusicSingle={ownedMusicSingle} />
+              <Dashboardinfo  
+                loading={loading}
+                setloader={setloader} 
+                responsiveMainmobile={responsiveMobile} 
+                ownedAlbums={ownedAlbums} 
+                ownedSingles={ownedSingles} 
+                ownedMusicAlbum={ownedMusicAlbum} 
+                ownedMusicSingle={ownedMusicSingle} 
+                selectlist={selectlist}
+                />
 
-              <Itemsinfo responsiveMainmobile={responsiveMobile} select={select} />
+              <Itemsinfo  
+                loading={loading} 
+                responsiveMainmobile={responsiveMobile} 
+                select={select} 
+                activate={activate} 
+                setSelect={setSelect} 
+                />
 
           </Box>
       

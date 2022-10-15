@@ -3,12 +3,17 @@ import styles from "../styles/Singlemarket.module.css"
 import Contexts from './context/contextclass';
 import { ethers } from 'ethers';
 import { contractaddress, contractABI, chainID } from "./utils/constants";
+import { useRouter } from 'next/router';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 
 export default function Singlemarket() {
 
 const { address, setAddress, provider } = useContext(Contexts);
 const [singlesmarket, setSinglesMarket] = useState([]);
+const [singleslisted, setSingleslisted] = useState([]);
+const router = useRouter();
+
         /* global BigInt */
 
 
@@ -25,6 +30,22 @@ const [singlesmarket, setSinglesMarket] = useState([]);
 
 
 
+    const checkforsale = async (ids) => {
+        let value = ids.split(',');
+        const idOne = parseInt(value[0]);
+        const idTwo = parseInt(value[1]);
+        const contract = await getContract();
+        const getsinglescheck = await contract.checksaleSingle(idOne, idTwo);
+
+        if(getsinglescheck === true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
     const getsingles = async () => {
 
         const contract = await getContract();
@@ -32,8 +53,32 @@ const [singlesmarket, setSinglesMarket] = useState([]);
         const getsinglesmarket = await contract.getSinglesmarket();
 
         setSinglesMarket(getsinglesmarket);
+        const arr = [];
+
+        getsinglesmarket.map(async (data, index) => {
+            const checker = await checkforsale(data.id);
+            if(checker) {
+                arr.push(data);
+            }
+        })
+
+        setTimeout(() => {
+            console.log("All wrapped up setTimeOut");
+            setSingleslisted(arr);
+          }, 3000);
+
   
     }
+
+
+
+    const purchase = (selectedItem) => {
+
+        router.push("/purchase/"+selectedItem.id+"/"+selectedItem.musictype);
+  
+    }
+
+
 
 
 
@@ -64,55 +109,61 @@ const [singlesmarket, setSinglesMarket] = useState([]);
 
       <div className={styles.insidecontainer}>
 
-            { singlesmarket.length !== 0 
+            { singleslisted.length !== 0 
 
             ?
 
-            singlesmarket.map((data, index) => (
+            singleslisted.map((data, index) => {
 
-                <div className={styles.holder} key={index}>
+            return ( 
+                <div className={styles.holder} key={index} onClick={ () => purchase(data) } >
 
-                <div className={styles.salecontainer}>
+                            <div className={styles.salecontainer}>
 
-                        <div className={styles.imagecontainer}>
-                            <img src={data.imguri} />
-                        </div>
+                                    <div className={styles.imagecontainer}>
+                                        <img src={data.imguri} />
+                                    </div>
 
-                        <div className={styles.infocontainer}>
-                            <div className={styles.musicname}>{data.songname}</div>
-                        </div>
+                                    <div className={styles.infocontainer}>
+                                        <div className={styles.musicname}>{data.songname}</div>
+                                    </div>
 
-                </div>
-
-
-
-
-
-                    <div className={styles.otherinfo}>
-
-                        <div className={styles.date}>
-                            <div>Artist</div>
-                            <div>{data.artist}</div>
-                        </div> 
-
-                        <div className={styles.price}>
-                            <div>Price</div>
-
-                            <div className={styles.pricecontain}>
-                                <img src='/currencyimg.png'/>
-                                <div>{ BigInt(data.cost).toString() } ETH</div>
                             </div>
 
+
+
+
+
+                                <div className={styles.otherinfo}>
+
+                                    <div className={styles.date}>
+                                        <div>Artist</div>
+                                        <div>{data.artist}</div>
+                                    </div> 
+
+                                    <div className={styles.price}>
+                                        <div>Price</div>
+
+                                        <div className={styles.pricecontain}>
+                                            <img src='/currencyimg.png'/>
+                                            <div>{ Math.round( (data?.cost/10 ** 18) * 10 ) / 10 } ETH</div>
+                                        </div>
+
+                                    </div>
+
                         </div>
 
-                    </div>
+
+                        <div className={styles.buyborder} > <ShoppingBagIcon fontSize="small" className={styles.icon} />  Place Bid</div>
+
+
+                 </div>
+
+                )
 
 
 
-
-                </div>
-
-                )) 
+            }) 
 
 
             : 

@@ -18,6 +18,12 @@
 
 
 
+.adjustwallet {
+
+    font-size: 18px;
+
+}
+
 
 
 .connectButton button {
@@ -100,6 +106,14 @@
     }
 
 
+    .eachsectioncover {
+        display: flex;
+        padding: 10px 10px 0 10px;
+        justify-content: space-between;
+        align-items: center;
+        color: #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+    }
 
 
 
@@ -128,12 +142,13 @@
   @media screen and (max-width: 424px ) {
 
     .linkContainer {
-        width: 82%;
+        width: 100%;
         display: flex;
-        justify-content: space-around;
-        font-size: 12px;
-        margin: 0;
-        padding: 0;
+        justify-content: flex-end;
+        font-size: 10px;
+        align-items: center;
+        margin: 0px;
+        gap: 14px;
     }
 
 

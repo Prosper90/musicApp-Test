@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styles from "../styles/Home.module.css"
 import { ethers } from "ethers";
 import React, { useEffect, useState, useContext } from 'react';
-import ABI from "../components/ABI.json";
 import Typography from '@mui/material/Typography';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Contexts from 'components/context/contextclass';
@@ -53,6 +52,8 @@ export default function Home(props) {
                   <img className={styles.img} src='/illustration.png' />
               </div>
 
+              <img src="/slider.png" alt="style" className={styles.siderimg} />
+
         </div>
 
 
@@ -62,7 +63,7 @@ export default function Home(props) {
 
 
         
-  <Notification open={open} handleClose={handleClose} severity={severity} notificationMessage={notificationMessage} />
+       <Notification open={open} handleClose={handleClose} severity={severity} notificationMessage={notificationMessage} />
 
 
     </div> 

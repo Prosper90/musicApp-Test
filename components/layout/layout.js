@@ -36,6 +36,10 @@ export default function Layout({children}) {
   const [open, setOpen] = useState(false);
   const [severity, setSeverity] = useState("");
   const [notificationMessage, setNotificationMessage] = useState("");
+  //wallet balance
+  const [tokenbalance, setTokenBalance] = useState();
+  //borrowed value
+  const [borrowamount, setBorrowamount] = useState(0);
 
 
 
@@ -49,7 +53,7 @@ export default function Layout({children}) {
 
   return (
 
-    <Contexts.Provider value = { { sections, setSections, address, setAddress, provider, setProvider, setOpen, setSeverity, setNotificationMessage, open, severity, notificationMessage } }>
+    <Contexts.Provider value = { { sections, setSections, address, setAddress, provider, setProvider, setOpen, setSeverity, setNotificationMessage, open, severity, notificationMessage, setTokenBalance, tokenbalance, borrowamount, setBorrowamount } }>
 
           <Grid className={  styles.container } container spacing={1}>
 
@@ -106,6 +110,7 @@ export default function Layout({children}) {
                 <WalletSection />
 
                 <Children> { children } </Children>
+
             </Grid>
 
           }

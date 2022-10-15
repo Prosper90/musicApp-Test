@@ -1,12 +1,23 @@
 import abi from "./ABI.json";
+import currencyabi from "./currencyTokenABI.json";
 
 
 
-export const contractaddress = "0x737a09c90fc292832186596e4c928a7774bfdd9c";
+export const contractaddress = "0xF92915c0f2E350882379f15CdA84FAC34E7aDCAd";
+
+//test  before 0xAa181B1fb8F89cb21d98bA7BECDe6E3b277AFB64
+
+
+//current 0x08A58933A63C7AB4C378e703dA190f3Fe85b7fb7
+
+
+//export const currencyTokenaddress = "0xae13d989dac2f0debff460ac112a837c89baa7cd";
 
 export const contractABI = abi;
 
-export const chainID = 3;
+//export const currencytokenABI = currencyabi;
+
+export const chainID = 97;
 
 
 

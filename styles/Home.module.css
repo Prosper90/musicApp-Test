@@ -84,6 +84,12 @@
 }
 
 
+.siderimg {
+  position: absolute;
+  /* right: -7px; */
+  top: -51px;
+  z-index: 1;
+}
 
 
 

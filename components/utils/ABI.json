@@ -117,6 +117,35 @@
 				"internalType": "uint256",
 				"name": "secondId",
 				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "borrowamount",
+				"type": "uint256"
+			}
+		],
+		"name": "borrow",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "firstId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "secondId",
+				"type": "uint256"
 			}
 		],
 		"name": "buysellAlbum",
@@ -309,10 +338,161 @@
 				"type": "uint256"
 			}
 		],
+		"name": "checkAlbum",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "firstId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "secondId",
+				"type": "uint256"
+			}
+		],
+		"name": "checksaleAlbum",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "firstId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "secondId",
+				"type": "uint256"
+			}
+		],
+		"name": "checksaleSingle",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "firstId",
+				"type": "uint256"
+			}
+		],
+		"name": "checkSingle",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "firstId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "secondId",
+				"type": "uint256"
+			}
+		],
 		"name": "getAlbum",
 		"outputs": [
 			{
 				"components": [
+					{
+						"internalType": "string",
+						"name": "musictype",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "songname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "artist",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "uri",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "imguri",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "id",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "sale",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cost",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Music.Song[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAlbumsmarket",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "musictype",
+						"type": "string"
+					},
 					{
 						"internalType": "string",
 						"name": "songname",
@@ -389,6 +569,11 @@
 				"components": [
 					{
 						"internalType": "string",
+						"name": "musictype",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
 						"name": "songname",
 						"type": "string"
 					},
@@ -437,6 +622,11 @@
 		"outputs": [
 			{
 				"components": [
+					{
+						"internalType": "string",
+						"name": "musictype",
+						"type": "string"
+					},
 					{
 						"internalType": "string",
 						"name": "songname",
