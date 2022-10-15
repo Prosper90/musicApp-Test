@@ -52,8 +52,6 @@ export default function Home(props) {
                   <img className={styles.img} src='/illustration.png' />
               </div>
 
-              <img src="/slider.png" alt="style" className={styles.siderimg} />
-
         </div>
 
 

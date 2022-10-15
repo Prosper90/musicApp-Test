@@ -129,6 +129,30 @@ export default function Mintpage(props) {
         const Contract = await getContract();
         const waito = await Contract.addSingle(copies, songName, artist, musiuri, imageuri, reformat);
 
+
+
+        //check for seller account
+        const  checkifaccountexist = await fetch(`https://streamifi-backend.herokuapp.com/user/${address}`, { method: 'GET' })
+        const checkuser = await checkifaccountexist.json();
+
+              //first update sellers sold
+          if(checkuser.user == null){
+            //console.log(checkseller);
+                const createuserbuyer = await fetch(`https://streamifi-backend.herokuapp.com/user`, 
+                {
+                    method: 'POST',   
+                    headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ address: address, bought: 0, sold: 0, profits: 0, borrowamount: 0  })
+                }
+            );
+            await createuserbuyer.json();
+        }
+
+
+
         if(waito) {
 
           setOpen(true);
@@ -207,6 +231,31 @@ export default function Mintpage(props) {
           const Contract = await getContract();
           //console.log(Contract);
           const waito = await Contract.addAlbum( songput, artistput, musiuris, imageuri, reformat );
+
+
+
+          //check for seller account
+          const  checkifaccountexist = await fetch(`https://streamifi-backend.herokuapp.com/user/${address}`, { method: 'GET' })
+          const checkuser = await checkifaccountexist.json();
+
+                //first update sellers sold
+            if(checkuser.user == null){
+              //console.log(checkseller);
+                  const createuserbuyer = await fetch(`https://streamifi-backend.herokuapp.com/user`, 
+                  {
+                      method: 'POST',   
+                      headers: {
+                      'Accept': 'application/json',
+                      'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({ address: address, bought: 0, sold: 0, profits: 0, borrowamount: 0  })
+                  }
+              );
+              await createuserbuyer.json();
+          }
+
+
+
 
           if(waito) {
 
