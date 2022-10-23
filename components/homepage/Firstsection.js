@@ -1959,7 +1959,7 @@ here
   <div className="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-neutral-900 dark:text-neutral-50">
     <div className="max-w-2xl">
       <h2 className="flex items-center  flex-wrap  text-3xl md:text-4xl font-semibold">
-        Explore NFTs Video
+        Explore NFT Music
       </h2>
       <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400">
         Click on play icon and enjoy NTFs video
@@ -2086,7 +2086,7 @@ here
           </div>
           <div className="p-5">
             <div className="flex justify-between items-center">
-              <h2 className="sm:text-lg font-semibold text-white">NFT Video #1922</h2>
+              <h2 className="sm:text-lg font-semibold text-white">NFT Music #1922</h2>
               <div className="ml-2 flex items-center space-x-3">
                 <div className="hidden sm:flex -space-x-1 ">
                   Icon
@@ -2177,7 +2177,7 @@ here
           </div>
           <div className="p-5">
             <div className="flex justify-between items-center">
-              <h2 className="sm:text-lg font-semibold text-white">NFT Video #1885</h2>
+              <h2 className="sm:text-lg font-semibold text-white">NFT Music #1885</h2>
 
               <div className="ml-2 flex items-center space-x-3">
                 <div className="hidden sm:flex -space-x-1 ">
@@ -2269,7 +2269,7 @@ here
           </div>
           <div className="p-5">
             <div className="flex justify-between items-center">
-              <h2 className="sm:text-lg font-semibold text-white">NFT Video #1395</h2>
+              <h2 className="sm:text-lg font-semibold text-white">NFT Music #1395</h2>
               <div className="ml-2 flex items-center space-x-3">
                 <div className="hidden sm:flex -space-x-1 ">
                   Icon
@@ -2382,7 +2382,7 @@ here
           </div>
           <div className="p-5">
             <div className="flex justify-between items-center">
-              <h2 className="sm:text-lg font-semibold text-white">NFT Video #1845</h2>
+              <h2 className="sm:text-lg font-semibold text-white">NFT Music #1845</h2>
               <div className="ml-2 flex items-center space-x-3">
                 Icon
               </div>
@@ -2416,7 +2416,7 @@ here
           <div className="flex aspect-w-16 aspect-h-9 w-full h-0 rounded-3xl bg-neutral-100 dark:bg-neutral-800" />
           <div className="absolute inset-y-6 inset-x-10  flex flex-col items-center justify-center">
             <div className="flex items-center justify-center relative">
-              <span className="text-xl font-semibold">NFTs Video</span>
+              <span className="text-xl font-semibold">NFTs Music</span>
               <svg
                 className="absolute left-full w-5 h-5 ml-2 rotate-45 group-hover:scale-110 transition-transform"
                 viewBox="0 0 24 24"
