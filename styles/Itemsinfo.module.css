@@ -181,7 +181,8 @@
     /* background: linear-gradient(270.24deg, #40C9FF -1.44%, #E81CFF 99.82%); */
     color: #FFFFFF;
     background: none;
-    border: 1px solid #ffffff
+    border: 1px solid #ffffff;
+    cursor: pointer;
 }
 
 

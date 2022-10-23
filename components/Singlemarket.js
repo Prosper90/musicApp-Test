@@ -154,7 +154,7 @@ const router = useRouter();
                         </div>
 
 
-                        <div className={styles.buyborder} > <ShoppingBagIcon fontSize="small" className={styles.icon} />  Place Bid</div>
+                        <div className={styles.buyborder} > <ShoppingBagIcon fontSize="small" className={styles.icon} />  Buy </div>
 
 
                  </div>

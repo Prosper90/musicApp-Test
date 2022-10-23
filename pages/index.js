@@ -7,6 +7,11 @@ import Typography from '@mui/material/Typography';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Contexts from 'components/context/contextclass';
 import Notification from 'components/Notification';
+import Firstsection from 'components/homepage/Firstsection';
+import Secondsection from 'components/homepage/Secondsection';
+
+
+
 
 export default function Home(props) {
 
@@ -28,43 +33,30 @@ export default function Home(props) {
  
 
   useEffect(() => {
-
+    
+    import("bootstrap/dist/js/bootstrap");
        setSections(false);
 
   })
 
 
   return (
-    <div className={styles.container}>
 
-        <div className={styles.firstlayercontainer}>
+  <>
 
-              <div className={styles.welcomecontainer}>
-                  <Typography variant="h1" gutterBottom>Truly Decentralized Music</Typography>
-                  <Typography variant="overline" display="block" gutterBottom> Music connect, Blockchain Melody, Rythm & game </Typography>
-                  <button>Get Started <ArrowForwardIosIcon className={styles.icon} /> </button>
-              </div>
+  {/*First section */}
+    <Firstsection />
+  {/*First section */}
 
+  {/*Second section footer */}
+    <Secondsection />
+  {/*Second section footer */}
 
-
-              <div className={styles.illustrationcontain}>
-                <div className={styles.overlay}></div>
-                  <img className={styles.img} src='/illustration.png' />
-              </div>
-
-        </div>
+  <Notification open={open} handleClose={handleClose} severity={severity} notificationMessage={notificationMessage} />
 
 
-        <div className={styles.secondlayercontainer}>
-            <img className={styles.img} src="/mainone.png" />
-        </div>
+   </>
 
-
-        
-       <Notification open={open} handleClose={handleClose} severity={severity} notificationMessage={notificationMessage} />
-
-
-    </div> 
   )
 }
 

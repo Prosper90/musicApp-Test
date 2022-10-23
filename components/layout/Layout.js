@@ -96,10 +96,14 @@ export default function Layout({children}) {
           ?
           <Grid item xs={12}>
              
-            <Header />
+            <div className="text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-190 dark">
 
-            <Children > { children } </Children>
+                <Header />
 
+                { children } 
+
+            </div>
+           
           </Grid>
 
 
@@ -109,7 +113,9 @@ export default function Layout({children}) {
              
                 <WalletSection />
 
-                <Children> { children } </Children>
+                    <div >
+                     { children } 
+                    </div>
 
             </Grid>
 

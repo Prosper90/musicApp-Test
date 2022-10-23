@@ -106,8 +106,7 @@ export default function Itemsale(props) {
               gasLimit: 1000000,
               nonce: 105 || undefined,
             });
-          await buying;
-          console.log(buying);
+
       } else {
           const Contract = await getContract();
             await Contract.buysellSingle(idOne, idTwo, {

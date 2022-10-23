@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react';
 import '../styles/globals.css';
+import '../styles/maincss.css';
 import Layout from 'components/layout/Layout';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
