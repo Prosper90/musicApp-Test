@@ -2272,7 +2272,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     right: 1rem
 }
 
-.\ !-right-5 {
+.\-right-5 {
     right: -1.25rem !important
 }
 
@@ -2821,7 +2821,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     height: 100%
 }
 
-.\ !h-9 {
+.\h-9 {
     height: 2.25rem !important
 }
 
@@ -2969,7 +2969,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     width: 1rem
 }
 
-.\ !w-9 {
+.\w-9 {
     width: 2.25rem !important
 }
 
@@ -3021,7 +3021,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     width: 68px
 }
 
-.\ !w-44 {
+.\w-44 {
     width: 11rem !important
 }
 
@@ -3049,7 +3049,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     width: 10rem
 }
 
-.\ !w-40 {
+.\w-40 {
     width: 10rem !important
 }
 
@@ -3081,7 +3081,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     width: 40%
 }
 
-.\ !w-52 {
+.\w-52 {
     width: 13rem !important
 }
 
@@ -3177,7 +3177,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     max-width: 200px
 }
 
-.\ !max-w-screen-md {
+.\max-w-screen-md {
     max-width: 768px !important
 }
 
@@ -3749,7 +3749,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     border-top-left-radius: 1rem
 }
 
-.\ !rounded-l-none {
+.\rounded-l-none {
     border-bottom-left-radius: 0 !important;
     border-top-left-radius: 0 !important
 }
@@ -3762,7 +3762,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     border-width: 1px
 }
 
-.\ !border-0 {
+.\border-0 {
     border-width: 0 !important
 }
 
@@ -3843,7 +3843,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     border-color: rgb(34 197 94/var(--tw-border-opacity))
 }
 
-.\ !border-primary-500 {
+.\border-primary-500 {
     --tw-border-opacity: 1 !important;
     border-color: rgba(var(--c-primary-500), var(--tw-border-opacity)) !important
 }
@@ -4314,7 +4314,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     padding-top: 2.25rem
 }
 
-.\ !px-10 {
+.\px-10 {
     padding-left: 2.5rem !important;
     padding-right: 2.5rem !important
 }
@@ -4339,7 +4339,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     padding-top: .75rem
 }
 
-.\ !pr-16 {
+.\pr-16 {
     padding-right: 4rem !important
 }
 
@@ -4431,7 +4431,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     padding-bottom: 3.5rem
 }
 
-.\ !pr-10 {
+.\pr-10 {
     padding-right: 2.5rem !important
 }
 
@@ -4568,7 +4568,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     font-weight: 600
 }
 
-.\ !font-semibold {
+.\font-semibold {
     font-weight: 600 !important
 }
 
@@ -4588,7 +4588,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     text-transform: capitalize
 }
 
-.\ !leading-none {
+.\leading-none {
     line-height: 1 !important
 }
 
@@ -4600,19 +4600,19 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     line-height: 1
 }
 
-.\ !leading-\[1\.112\] {
+.\leading-\[1\.112\] {
     line-height: 1.112 !important
 }
 
-.\ !leading-tight {
+.\leading-tight {
     line-height: 1.25 !important
 }
 
-.\ !leading-\[114\%\] {
+.\leading-\[114\%\] {
     line-height: 114% !important
 }
 
-.\ !leading-\[115\%\] {
+.\leading-\[115\%\] {
     line-height: 115% !important
 }
 
@@ -4903,7 +4903,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color)
 }
 
-.\ !shadow-xl {
+.\shadow-xl {
     --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 8px 10px -6px rgba(0, 0, 0, .1) !important;
     --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color) !important;
     box-shadow: 0 0 #0000, 0 0 #0000, var(--tw-shadow) !important;
@@ -6408,7 +6408,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     .sm\:w-6 {
         width: 1.5rem
     }
-    .sm\:\ !w-52 {
+    .sm\:\w-52 {
         width: 13rem !important
     }
     .sm\:w-48 {
@@ -6786,7 +6786,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     .md\:h-16 {
         height: 4rem
     }
-    .md\:\ !h-10 {
+    .md\:\h-10 {
         height: 2.5rem !important
     }
     .md\:h-24 {
@@ -6882,7 +6882,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
     .md\:rounded-\[36px\] {
         border-radius: 36px
     }
-    .md\:\ !border-transparent {
+    .md\:\border-transparent {
         border-color: transparent !important
     }
     .md\:py-2 {
@@ -6959,7 +6959,7 @@ tfoot td:last-child):not(:where([class~=not-prose] *)) {
         font-size: 1.875rem;
         line-height: 2.25rem
     }
-    .md\:\ !leading-\[120\%\] {
+    .md\:\leading-\[120\%\] {
         line-height: 120% !important
     }
     .md\:leading-\[115\%\] {
