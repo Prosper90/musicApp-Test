@@ -113,7 +113,7 @@ export default function Layout({children}) {
              
                 <WalletSection />
 
-                    <div >
+                    <div className='childrenContainer'>
                      { children } 
                     </div>
 

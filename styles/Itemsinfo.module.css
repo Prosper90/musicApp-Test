@@ -11,7 +11,8 @@
 .listallcontainer {
     border-radius: 10px;
     height: 205px;
-    background: #211F27;
+    /* background: #211F27; */
+    background: #1F2937;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,7 +85,9 @@
 
 
 .listoneinfo {
-    background: linear-gradient(156.67deg, rgba(112, 112, 114, 0.4) 0.07%, rgba(100, 97, 113, 0.148) 99.07%);
+   /* background: linear-gradient(156.67deg, rgba(112, 112, 114, 0.4) 0.07%, rgba(100, 97, 113, 0.148) 99.07%); */
+   /* background: #1F2937; */
+    background: #1F2937;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -211,7 +214,8 @@
     height: 132px;
     width: 162px;
     padding: 20px;
-    background: #211F27;
+    /* background: #211F27; */
+    background: #1F2937;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -234,7 +238,8 @@
 
 .listoneinfomobile {
     /*background: #211F27;*/
-    background: linear-gradient(156.67deg, rgba(112, 112, 114, 0.5) 0.07%, rgba(100, 97, 113, 2) 99.07%);
+    /* background: linear-gradient(156.67deg, rgba(112, 112, 114, 0.5) 0.07%, rgba(100, 97, 113, 2) 99.07%); */
+    background: #1F2937;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -247,7 +252,7 @@
     top: 50%;
     left: 50%;
     width: 59%;
-    height: 300px;
+    height: 345px;;
     transform: translate(-50%, -50%);
 }
 

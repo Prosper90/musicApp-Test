@@ -145,7 +145,7 @@ export default function Mintpage(props) {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ address: address, bought: 0, sold: 0, profits: 0, borrowamount: 0  })
+                    body: JSON.stringify({ address: address, bought: 0, sold: 0, profits: 0, borrowamount: 0, creator: 'creator'  })
                 }
             );
             await createuserbuyer.json();
@@ -248,7 +248,7 @@ export default function Mintpage(props) {
                       'Accept': 'application/json',
                       'Content-Type': 'application/json'
                       },
-                      body: JSON.stringify({ address: address, bought: 0, sold: 0, profits: 0, borrowamount: 0  })
+                      body: JSON.stringify({ address: address, bought: 0, sold: 0, profits: 0, borrowamount: 0, creator: 'creator'  })
                   }
               );
               await createuserbuyer.json();
@@ -319,6 +319,7 @@ export default function Mintpage(props) {
                 <div className={styles.inputform}>
                   <HeadphonesIcon /> <input name='musicNames' className={styles.input} placeholder="Music names"  />
                 </div>
+                
                </LightTooltip>
 
                <LightTooltip title="Your input must be comma seperated" placement="top">

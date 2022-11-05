@@ -33,7 +33,6 @@ export default function Header() {
    const [windoweth, setWindoweth] = useState();
    const [onmenu, setOnmenu] = useState(false);
    const [openTokens, setOpentokens] = useState(false);
-   const [hover, setHover] = useState('games');
    
  
    
@@ -252,16 +251,6 @@ export default function Header() {
              }
 
           }
-
-
-
-
-          //more links
-          const morelinks = (link, sethover) => {
-              setHover(sethover);
-              router.push(link);
-              
-          }
       
       
 
@@ -452,6 +441,7 @@ export default function Header() {
                                                 <a
                                                   aria-current="page"
                                                   className="flex px-4 py-2.5 dark:text-neutral-200 text-sm font-medium rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 mt-[2px] text-secondary-500"
+                                                  href="/ciscryp"
                                                 >
                                                   <span className="block w-full">About streamifi</span>
                                                 </a>
@@ -556,36 +546,31 @@ export default function Header() {
     data-nc-id="Nav"
   >
     <ul className="flex justify-between sm:space-x-2 w-full" style={{margin: '0px'}}>
-      <li className="nc-NavItem relative" data-nc-id="NavItem" onClick={() => morelinks('/games/Games', 'games')}>
-        <button 
-        className= { hover == 'games' ? "block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full bg-primary-100/90 dark:bg-primary-100 text-primary-900  focus:outline-none" : "block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-800 hover:bg-neutral-100/75 dark:hover:bg-neutral-800 focus:outline-none" } >
+      <li className="nc-NavItem relative" data-nc-id="NavItem">
+        <button className="block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full bg-primary-100/90 dark:bg-primary-100 text-primary-900  focus:outline-none">
           Games
         </button>
       </li>
-      <li className="nc-NavItem relative" data-nc-id="NavItem" onClick={() => morelinks('/artists/Artists', 'whale')}>
-        <button 
-          className= { hover == 'whale' ? "block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full bg-primary-100/90 dark:bg-primary-100 text-primary-900  focus:outline-none" : "block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-800 hover:bg-neutral-100/75 dark:hover:bg-neutral-800 focus:outline-none" } >
+      <li className="nc-NavItem relative" data-nc-id="NavItem">
+        <button className="block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-800 hover:bg-neutral-100/75 dark:hover:bg-neutral-800 focus:outline-none">
           Whale labs
         </button>
       </li>
-      <li className="nc-NavItem relative" data-nc-id="NavItem" onClick={() => morelinks('/artists/Artists', 'token')}>
-        <button 
-          className= { hover == 'token' ? "block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full bg-primary-100/90 dark:bg-primary-100 text-primary-900  focus:outline-none" : "block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-800 hover:bg-neutral-100/75 dark:hover:bg-neutral-800 focus:outline-none" }>
+      <li className="nc-NavItem relative" data-nc-id="NavItem">
+        <button className="block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-800 hover:bg-neutral-100/75 dark:hover:bg-neutral-800 focus:outline-none">
           Token
         </button>
       </li>
-      <li className="nc-NavItem relative" data-nc-id="NavItem" onClick={() => morelinks('/artists/Artists', 'ticker')} >
-        <button 
-         className= { hover == 'ticker' ? "block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full bg-primary-100/90 dark:bg-primary-100 text-primary-900  focus:outline-none" : "block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-800 hover:bg-neutral-100/75 dark:hover:bg-neutral-800 focus:outline-none" }>
+      <li className="nc-NavItem relative" data-nc-id="NavItem">
+        <button className="block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-800 hover:bg-neutral-100/75 dark:hover:bg-neutral-800 focus:outline-none">
           Ticker+price
         </button>
       </li>
-      <li className="nc-NavItem relative" data-nc-id="NavItem" onClick={() => morelinks('/artists/Artists', 'artists')}  >
-          <button 
-           className= { hover == 'artists' ? "block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full bg-primary-100/90 dark:bg-primary-100 text-primary-900  focus:outline-none" : "block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-800 hover:bg-neutral-100/75 dark:hover:bg-neutral-800 focus:outline-none" }>
+      <Link className="nc-NavItem relative" data-nc-id="NavItem" href="/artists/Artists" >
+        <a><button className="block !leading-none font-medium whitespace-nowrap px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-800 hover:bg-neutral-100/75 dark:hover:bg-neutral-800 focus:outline-none">
            Artists
-        </button>
-      </li>
+        </button></a>
+      </Link>
     </ul>
   </nav>
 
@@ -611,6 +596,7 @@ aria-modal="true"
       <div className="py-6 px-5">
         <a
           className="ttnc-logo inline-block text-primary-6000 "
+          href="/ciscryp"
           tabIndex={0}
         >
           <img
@@ -764,6 +750,7 @@ aria-modal="true"
                   <a
                     aria-current="page"
                     className="flex px-4 py-2.5 dark:text-neutral-200 text-sm font-medium rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 mt-[2px] text-secondary-500"
+                    href="/ciscryp"
                   >
                     <span className="block w-full">About streamifi</span>
                   </a>

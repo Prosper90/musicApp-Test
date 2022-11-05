@@ -107,9 +107,10 @@ const router = useRouter();
 
       <div className={styles.songscontainer}>
 
-      <div className={styles.insidecontainer}>
 
-            { singleslisted.length !== 0 
+      <div className="grid gap-4 md:gap-7 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+    { singleslisted.length !== 0 
 
             ?
 

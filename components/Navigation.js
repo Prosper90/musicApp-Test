@@ -26,17 +26,17 @@ export default function Navigation() {
 
          <div className={styles.iconscontains}>
 
-             <Link  href="/"><a><HomeIcon className={styles.icons} /></a></Link>
+             <Link className='text-white'  href="/"><a><HomeIcon className={styles.icons} /></a></Link>
 
-             <Link  href="/mintpage/Mintpage"><a><LibraryMusicIcon className={styles.icons} /></a></Link>
+             <Link className='text-white' href="/mintpage/Mintpage"><a><LibraryMusicIcon className={styles.icons} /></a></Link>
 
-             <Link  href="/marketplace/Marketplace"><a><LocalGroceryStoreIcon className={styles.icons} /></a></Link>
+             <Link className='text-white' href="/marketplace/Marketplace"><a><LocalGroceryStoreIcon className={styles.icons} /></a></Link>
 
          </div>
 
 
          <div className={styles.dashboard}>
-             <Link  href="/dashboard/Dashboard"><a><DashboardIcon className={styles.icons} /></a></Link>
+             <Link className='text-white' href="/dashboard/Dashboard"><a><DashboardIcon className={styles.icons} /></a></Link>
          </div>
 
 

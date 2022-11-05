@@ -1,0 +1,45 @@
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.imagecontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.gameimage {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+    max-width: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* margin-top: -94.8687px; */
+    /* transform: translate3d(0px, 94.85px, 0px); */
+}
+
+
+
+.comingsoon {
+ position: absolute;
+ columns: #FFF;
+}

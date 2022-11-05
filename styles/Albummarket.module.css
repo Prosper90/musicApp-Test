@@ -30,7 +30,8 @@
     width: 200px;
     height: 268px;
     /*background-color: #211F27;*/
-    background: linear-gradient(156.67deg, rgba(112, 112, 114, 0.4) 0.07%, rgba(100, 97, 113, 0.148) 99.07%);
+    /* background: linear-gradient(156.67deg, rgba(112, 112, 114, 0.4) 0.07%, rgba(100, 97, 113, 0.148) 99.07%); */
+    background-color: rgb(31,41,55, 0.6);
     border-radius: 10px;
     padding: 15px;
     font-size: 12px;
@@ -52,6 +53,9 @@
     /*backdrop-filter: blur(40px); note*/
     border-radius: 24px;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

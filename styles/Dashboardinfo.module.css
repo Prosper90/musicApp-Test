@@ -15,7 +15,8 @@
 
 
 .totalinfos {
-    background: #211F27;
+    /* background: #211F27; */
+    background: #1F2937;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -63,7 +64,8 @@
 
 .songslistcontainer {
     /* background: #211F27; */
-    background: linear-gradient(156.67deg, rgba(112, 112, 114, 0.4) 0.07%, rgba(100, 97, 113, 0.148) 99.07%);
+   /* background: linear-gradient(156.67deg, rgba(112, 112, 114, 0.4) 0.07%, rgba(100, 97, 113, 0.148) 99.07%); */
+    background: #1F2937;
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
@@ -198,7 +200,8 @@
 
 
 .totalinfostwo {
-    background: #211F27;
+   /* background: #211F27; */
+    background: #1F2937;
     border-radius: 10px;
     display: flex;
     align-items: center;

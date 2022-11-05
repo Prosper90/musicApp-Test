@@ -14,6 +14,8 @@
     justify-content: center;
     height: 45px;
     align-items: center;
+    gap: 10px;
+    color: #FFF;
 }
 
 
@@ -44,7 +46,8 @@
 .othersection .connectwallet {
     height: 35px;
     width: 108px;
-    background: #553CDF;
+    /* background: #553CDF; */
+    background-color: #0284C7;
     color: #FFFFFF;
     border: none;
     outline: none;
@@ -59,11 +62,14 @@
 }
 
 
+
+
 .othersection .walletbalance {
     width: 93.21px;
     height: 30px;
-    background: #2C2D31;
-    margin: 0 35px;
+    /* background: #2C2D31; */
+    background-color: #1F2937;
+    /* margin: 0 35px; */
     display: flex;
     justify-content: center;
     align-items: center;
