@@ -777,27 +777,8 @@ export default function Firstsection() {
               <span className="ml-2 text-sm">22</span>
             </button>
           </div>
-          <div className="absolute top-[-1px] right-[-1px] flex items-center">
-            <svg
-              className="text-white dark:text-neutral-900 w-44 md:w-[195px]"
-              viewBox="0 0 196 55"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M196 55V0H0.5V1H4.05286C12.4067 1 20.1595 5.34387 24.5214 12.4685L43.5393 43.5315C47.9012 50.6561 55.654 55 64.0078 55H196Z"
-                fill="currentColor"
-              />
-            </svg>
-            <div className="absolute right-5 top-1/2 -translate-y-1/2">
-              <span className="block text-xs text-neutral-500 dark:text-neutral-400 tracking-wide">
-                Remaining time
-              </span>
-              <span className="block md:text-lg font-semibold">
-                3h : 15m : 20s
-              </span>
-            </div>
-          </div>
+
+
           <div className="w-11/12 max-w-[360px] transform -mt-32 relative z-10">
             <div className="px-5 flex items-center space-x-4 relative ">
               <div className="flex-grow flex justify-center">
@@ -889,27 +870,7 @@ export default function Firstsection() {
               <span className="ml-2 text-sm">22</span>
             </button>
           </div>
-          <div className="absolute top-[-1px] right-[-1px] flex items-center">
-            <svg
-              className="text-white dark:text-neutral-900 w-44 md:w-[195px]"
-              viewBox="0 0 196 55"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M196 55V0H0.5V1H4.05286C12.4067 1 20.1595 5.34387 24.5214 12.4685L43.5393 43.5315C47.9012 50.6561 55.654 55 64.0078 55H196Z"
-                fill="currentColor"
-              />
-            </svg>
-            <div className="absolute right-5 top-1/2 -translate-y-1/2">
-              <span className="block text-xs text-neutral-500 dark:text-neutral-400 tracking-wide">
-                Remaining time
-              </span>
-              <span className="block md:text-lg font-semibold">
-                3h : 15m : 20s
-              </span>
-            </div>
-          </div>
+
           <div className="w-11/12 max-w-[360px] transform -mt-32 relative z-10">
             <div className="px-5 flex items-center space-x-4 relative ">
               <div className="flex-grow flex justify-center">

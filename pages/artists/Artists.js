@@ -2,10 +2,17 @@
 import React from 'react';
 import Header from 'components/layout/Header';
 import Secondsection from 'components/homepage/Secondsection';
+import { shortenAddress } from 'components/utils/trauncate';
 
 
 
-export default function Artists() {
+export default function Artists(props) {
+
+
+
+
+
+
   return (
     <div>
 
@@ -15,177 +22,26 @@ export default function Artists() {
     <div className="relative w-full h-40 md:h-60 2xl:h-72">
       <div className="nc-NcImage absolute inset-0" data-nc-id="NcImage">
         <img
-          src="/ciscryp/static/media/collectionBanner.d6484f9b1166d0e320bb.png"
+          src="/singer.jpg"
           className="object-cover w-full h-full"
-          alt="nc-imgs"
         />
       </div>
     </div>
     <div className="relative container -mt-14 lg:-mt-20">
       <div className=" bg-white dark:bg-neutral-900 dark:border dark:border-neutral-700 p-5 lg:p-8 rounded-3xl md:rounded-[40px] shadow-xl flex flex-col md:flex-row lg:items-center">
-        <div className="flex flex-col sm:flex-row md:block sm:items-start sm:justify-between">
-          <div className="w-40 sm:w-48 md:w-56 xl:w-60">
-            <div
-              className="nc-NcImage aspect-w-1 aspect-h-1 rounded-3xl overflow-hidden"
-              data-nc-id="NcImage"
-            >
-              <img
-                src="/ciscryp/static/media/3.13a3f285f186a17a3c82.png"
-                className="object-cover w-full h-full"
-                alt="nc-imgs"
-              />
-            </div>
-          </div>
-          <div className="mt-4 flex items-center sm:justify-center space-x-3">
-            <div className="flex space-x-1.5 text-neutral-700 dark:text-neutral-300">
-              <a
-                href="##"
-                className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800 cursor-pointer"
-              >
-                <i className="text-base sm:text-xl lab la-facebook-f" />
-              </a>
-              <a
-                href="##"
-                className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800 cursor-pointer"
-              >
-                <i className="text-base sm:text-xl lab la-twitter" />
-              </a>
-            </div>
-            <div className="h-5 border-l border-neutral-200 dark:border-neutral-700" />
-            <div className="flex space-x-1.5">
-              <div className="relative inline-block text-left">
-                <button
-                  className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800 cursor-pointer "
-                  title="More"
-                  id="headlessui-menu-button-:r64:"
-                  type="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <svg
-                    className="w-4 h-4 sm:h-5 sm:w-5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.44 8.8999C20.04 9.2099 21.51 11.0599 21.51 15.1099V15.2399C21.51 19.7099 19.72 21.4999 15.25 21.4999H8.73998C4.26998 21.4999 2.47998 19.7099 2.47998 15.2399V15.1099C2.47998 11.0899 3.92998 9.2399 7.46998 8.9099"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M12 15.0001V3.62012"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M15.35 5.85L12 2.5L8.65002 5.85"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div className="">
-                <div className="relative inline-block text-left">
-                  <button
-                    className=" w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800 cursor-pointer "
-                    title="More"
-                    id="headlessui-menu-button-:r65:"
-                    type="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <svg
-                      className="w-4 h-4 sm:h-5 sm:w-5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M5 10C3.9 10 3 10.9 3 12C3 13.1 3.9 14 5 14C6.1 14 7 13.1 7 12C7 10.9 6.1 10 5 10Z"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                      />
-                      <path
-                        d="M19 10C17.9 10 17 10.9 17 12C17 13.1 17.9 14 19 14C20.1 14 21 13.1 21 12C21 10.9 20.1 10 19 10Z"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                      />
-                      <path
-                        d="M12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div className="nc-NcModal" />
-                <div className="nc-NcModal" />
-                <div className="nc-NcModal" />
-                <div className="nc-NcModal" />
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div className="mt-5 md:mt-0 md:ml-8 xl:ml-14 flex-grow">
           <div className="max-w-screen-sm ">
-            <h2 className="inline-block text-2xl sm:text-3xl lg:text-4xl font-semibold">
-              Awesome NFTs collection{" "}
+            <h2 className="inline-block text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">
+              Artists {" "}
             </h2>
             <span className="block mt-4 text-sm text-neutral-500 dark:text-neutral-400">
-              Karafuru is home to 5,555 generative arts where colors reign
-              supreme. Leave the drab reality and enter the world of Karafuru by
-              Museum of Toys.
+                Our musicians and creators are those who have published an album or single on our platform. 
+                they offer the music for purchase on the market, where consumers can buy them and then 
+                access the song on our app
             </span>
           </div>
-          <div className="mt-6 xl:mt-8 grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 xl:gap-6">
-            <div className="rounded-2xl flex flex-col items-center justify-center shadow-md border border-neutral-50 dark:border-neutral-800 p-5 lg:p-6">
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                Floor Price
-              </span>
-              <span className="font-medium text-base mt-4 sm:text-xl sm:mt-6">
-                $295,481.62
-              </span>
-              <span className="text-xs text-green-500 mt-1">+2.11%</span>
-            </div>
-            <div className="rounded-2xl flex flex-col items-center justify-center shadow-md border border-neutral-50 dark:border-neutral-800 p-5 lg:p-6">
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                Volume
-              </span>
-              <span className="font-medium text-base mt-4 sm:text-xl sm:mt-6">
-                $295,481.62
-              </span>
-              <span className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-                total
-              </span>
-            </div>
-            <div className="rounded-2xl flex flex-col items-center justify-center shadow-md border border-neutral-50 dark:border-neutral-800 p-5 lg:p-6">
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                Latest Price
-              </span>
-              <span className="font-medium text-base mt-4 sm:text-xl sm:mt-6">
-                $295,481.62
-              </span>
-              <span className="text-xs text-green-500 mt-1"> --</span>
-            </div>
-            <div className="rounded-2xl flex flex-col items-center justify-center shadow-md border border-neutral-50 dark:border-neutral-800 p-5 lg:p-6">
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                Items
-              </span>
-              <span className="font-medium text-base mt-4 sm:text-xl sm:mt-6">
-                2235
-              </span>
-              <span className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-                total
-              </span>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -266,679 +122,99 @@ export default function Artists() {
         </div>
       </div>
 
-     {/* here */ }
+        {/* heretwo */}
+    
+    <div className="grid gap-4 md:gap-7 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
+      { props.creators?.map((data, index) => (
 
-     <div className="grid gap-4 md:gap-7 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-  <div
-    className="nc-CardAuthorBox4 relative flex flex-col overflow-hidden group dark:bg-neutral-800 group rounded-3xl hover:shadow-xl transition-shadow "
-    data-nc-id="CardAuthorBox4"
-  >
-    <div className="relative flex-shrink-0 h-36">
-      <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute top-2 left-3 !font-semibold text-red-800 bg-red-100  absolute top-2 left-3 !font-semibold">
-        🏆 #1
-      </span>
-      <div
-        className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"
-        data-nc-id="NcImage"
-      >
-        <img
-          src="https://images.pexels.com/photos/4800161/pexels-photo-4800161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          className="object-cover w-full h-full"
-          alt="nc-imgs"
-        />
-      </div>
-    </div>
-    <div className="pb-5 px-4 pt-1.5">
-      <div className="text-center relative flex items-center justify-center ">
-        <div className="relative">
-          <svg
-            className="mx-auto h-14 -mt-[38px] dark:text-neutral-800 dark:group-hover:text-neutral-800"
-            width={134}
-            height={54}
-            viewBox="0 0 134 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+          className="nc-CardAuthorBox4 relative flex flex-col overflow-hidden group dark:bg-neutral-800 group rounded-3xl hover:shadow-xl transition-shadow "
+          data-nc-id="CardAuthorBox4"
+          key={index}
+          onClick={ () => checkUser(data) }
           >
-            <path
-              d="M101.734 19.8581C99.2658 17.4194 96.9737 14.8065 94.5052 12.1935C94.1526 11.671 93.6237 11.3226 93.0947 10.8C92.7421 10.4516 92.5658 10.2774 92.2131 9.92903C85.6895 3.83226 76.6974 0 67 0C57.3026 0 48.3105 3.83226 41.6105 9.92903C41.2579 10.2774 41.0816 10.4516 40.7289 10.8C40.2 11.3226 39.8474 11.671 39.3184 12.1935C36.85 14.8065 34.5579 17.4194 32.0895 19.8581C23.2737 28.7419 11.4605 30.4839 -0.176331 30.8323V54H16.3974H32.0895H101.558H110.197H134V30.6581C122.363 30.3097 110.55 28.7419 101.734 19.8581Z"
-              fill="currentColor"
-            />
-          </svg>
-          <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-            <div className="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-12 h-12 text-2xl ">
-              <img
-                className="absolute inset-0 w-full h-full object-cover rounded-full"
-                src="/author3.png"
-                alt="John Doe"
-              />
-              <span className="wil-avatar__name">J</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-2.5 flex items-start items-center justify-between">
-        <div>
-          <h2 className="text-base font-medium flex items-center">
-            <span className="">Azul Hull</span>
-            <span className="ml-1">
-              <svg className="w-5 h-5" viewBox="0 0 17 17" fill="none">
-                <path
-                  d="M7.66691 2.62178C8.12691 2.22845 8.88025 2.22845 9.34691 2.62178L10.4002 3.52845C10.6002 3.70178 10.9736 3.84178 11.2402 3.84178H12.3736C13.0802 3.84178 13.6602 4.42178 13.6602 5.12845V6.26178C13.6602 6.52178 13.8002 6.90178 13.9736 7.10178L14.8802 8.15512C15.2736 8.61512 15.2736 9.36845 14.8802 9.83512L13.9736 10.8884C13.8002 11.0884 13.6602 11.4618 13.6602 11.7284V12.8618C13.6602 13.5684 13.0802 14.1484 12.3736 14.1484H11.2402C10.9802 14.1484 10.6002 14.2884 10.4002 14.4618L9.34691 15.3684C8.88691 15.7618 8.13358 15.7618 7.66691 15.3684L6.61358 14.4618C6.41358 14.2884 6.04025 14.1484 5.77358 14.1484H4.62025C3.91358 14.1484 3.33358 13.5684 3.33358 12.8618V11.7218C3.33358 11.4618 3.19358 11.0884 3.02691 10.8884L2.12691 9.82845C1.74025 9.36845 1.74025 8.62178 2.12691 8.16178L3.02691 7.10178C3.19358 6.90178 3.33358 6.52845 3.33358 6.26845V5.12178C3.33358 4.41512 3.91358 3.83512 4.62025 3.83512H5.77358C6.03358 3.83512 6.41358 3.69512 6.61358 3.52178L7.66691 2.62178Z"
-                  fill="#38BDF8"
-                  stroke="#38BDF8"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6.08691 8.98833L7.69358 10.6017L10.9136 7.375"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </h2>
-          <span className="block mt-0.5 text-sm ">
-            <span className="font-medium">12.321</span>
-            <span className="ml-1.5 text-neutral-500 dark:text-neutral-400">
-              ETH
-            </span>
-          </span>
-        </div>
-        <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm font-medium px-4 py-2 min-w-[84px]  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 relative z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
-          Songs
-        </button>
-      </div>
-    </div>
-    <a className="absolute inset-0" href="/ciscryp/page-author" />
-  </div>
-  <div
-    className="nc-CardAuthorBox4 relative flex flex-col overflow-hidden group dark:bg-neutral-800 group rounded-3xl hover:shadow-xl transition-shadow "
-    data-nc-id="CardAuthorBox4"
-  >
-    <div className="relative flex-shrink-0 h-36">
-      <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute top-2 left-3 !font-semibold text-green-800 bg-green-100  absolute top-2 left-3 !font-semibold">
-        🏅 #2
-      </span>
-      <div
-        className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"
-        data-nc-id="NcImage"
-      >
-        <img
-          src="https://images.pexels.com/photos/2179483/pexels-photo-2179483.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          className="object-cover w-full h-full"
-          alt="nc-imgs"
-        />
-      </div>
-    </div>
-    <div className="pb-5 px-4 pt-1.5">
-      <div className="text-center relative flex items-center justify-center ">
-        <div className="relative">
-          <svg
-            className="mx-auto h-14 -mt-[38px] dark:text-neutral-800 dark:group-hover:text-neutral-800"
-            width={134}
-            height={54}
-            viewBox="0 0 134 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M101.734 19.8581C99.2658 17.4194 96.9737 14.8065 94.5052 12.1935C94.1526 11.671 93.6237 11.3226 93.0947 10.8C92.7421 10.4516 92.5658 10.2774 92.2131 9.92903C85.6895 3.83226 76.6974 0 67 0C57.3026 0 48.3105 3.83226 41.6105 9.92903C41.2579 10.2774 41.0816 10.4516 40.7289 10.8C40.2 11.3226 39.8474 11.671 39.3184 12.1935C36.85 14.8065 34.5579 17.4194 32.0895 19.8581C23.2737 28.7419 11.4605 30.4839 -0.176331 30.8323V54H16.3974H32.0895H101.558H110.197H134V30.6581C122.363 30.3097 110.55 28.7419 101.734 19.8581Z"
-              fill="currentColor"
-            />
-          </svg>
-          <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-            <div className="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-12 h-12 text-2xl ">
-              <img
-                className="absolute inset-0 w-full h-full object-cover rounded-full"
-                src="/author3.png"
-                alt="John Doe"
-              />
-              <span className="wil-avatar__name">J</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-2.5 flex items-start items-center justify-between">
-        <div>
-          <h2 className="text-base font-medium flex items-center">
-            <span className="">Arnav Moris</span>
-            <span className="ml-1">
-              <svg className="w-5 h-5" viewBox="0 0 17 17" fill="none">
-                <path
-                  d="M7.66691 2.62178C8.12691 2.22845 8.88025 2.22845 9.34691 2.62178L10.4002 3.52845C10.6002 3.70178 10.9736 3.84178 11.2402 3.84178H12.3736C13.0802 3.84178 13.6602 4.42178 13.6602 5.12845V6.26178C13.6602 6.52178 13.8002 6.90178 13.9736 7.10178L14.8802 8.15512C15.2736 8.61512 15.2736 9.36845 14.8802 9.83512L13.9736 10.8884C13.8002 11.0884 13.6602 11.4618 13.6602 11.7284V12.8618C13.6602 13.5684 13.0802 14.1484 12.3736 14.1484H11.2402C10.9802 14.1484 10.6002 14.2884 10.4002 14.4618L9.34691 15.3684C8.88691 15.7618 8.13358 15.7618 7.66691 15.3684L6.61358 14.4618C6.41358 14.2884 6.04025 14.1484 5.77358 14.1484H4.62025C3.91358 14.1484 3.33358 13.5684 3.33358 12.8618V11.7218C3.33358 11.4618 3.19358 11.0884 3.02691 10.8884L2.12691 9.82845C1.74025 9.36845 1.74025 8.62178 2.12691 8.16178L3.02691 7.10178C3.19358 6.90178 3.33358 6.52845 3.33358 6.26845V5.12178C3.33358 4.41512 3.91358 3.83512 4.62025 3.83512H5.77358C6.03358 3.83512 6.41358 3.69512 6.61358 3.52178L7.66691 2.62178Z"
-                  fill="#38BDF8"
-                  stroke="#38BDF8"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6.08691 8.98833L7.69358 10.6017L10.9136 7.375"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </h2>
-          <span className="block mt-0.5 text-sm ">
-            <span className="font-medium">12.321</span>
-            <span className="ml-1.5 text-neutral-500 dark:text-neutral-400">
-              ETH
-            </span>
-          </span>
-        </div>
-        <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm font-medium px-4 py-2 min-w-[84px]  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 relative z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
-          Songs
-        </button>
-      </div>
-    </div>
-    <a className="absolute inset-0" href="/ciscryp/page-author" />
-  </div>
-  <div
-    className="nc-CardAuthorBox4 relative flex flex-col overflow-hidden group dark:bg-neutral-800 group rounded-3xl hover:shadow-xl transition-shadow "
-    data-nc-id="CardAuthorBox4"
-  >
-    <div className="relative flex-shrink-0 h-36">
-      <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute top-2 left-3 !font-semibold text-yellow-800 bg-yellow-100  absolute top-2 left-3 !font-semibold">
-        🏅 #3
-      </span>
-      <div
-        className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"
-        data-nc-id="NcImage"
-      >
-        <img
-          src="https://images.pexels.com/photos/380337/pexels-photo-380337.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          className="object-cover w-full h-full"
-          alt="nc-imgs"
-        />
-      </div>
-    </div>
-    <div className="pb-5 px-4 pt-1.5">
-      <div className="text-center relative flex items-center justify-center ">
-        <div className="relative">
-          <svg
-            className="mx-auto h-14 -mt-[38px] dark:text-neutral-800 dark:group-hover:text-neutral-800"
-            width={134}
-            height={54}
-            viewBox="0 0 134 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M101.734 19.8581C99.2658 17.4194 96.9737 14.8065 94.5052 12.1935C94.1526 11.671 93.6237 11.3226 93.0947 10.8C92.7421 10.4516 92.5658 10.2774 92.2131 9.92903C85.6895 3.83226 76.6974 0 67 0C57.3026 0 48.3105 3.83226 41.6105 9.92903C41.2579 10.2774 41.0816 10.4516 40.7289 10.8C40.2 11.3226 39.8474 11.671 39.3184 12.1935C36.85 14.8065 34.5579 17.4194 32.0895 19.8581C23.2737 28.7419 11.4605 30.4839 -0.176331 30.8323V54H16.3974H32.0895H101.558H110.197H134V30.6581C122.363 30.3097 110.55 28.7419 101.734 19.8581Z"
-              fill="currentColor"
-            />
-          </svg>
-          <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-            <div className="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-12 h-12 text-2xl ">
-              <img
-                className="absolute inset-0 w-full h-full object-cover rounded-full"
-                src="/author3.png"
-                alt="John Doe"
-              />
-              <span className="wil-avatar__name">J</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-2.5 flex items-start items-center justify-between">
-        <div>
-          <h2 className="text-base font-medium flex items-center">
-            <span className="">Nevaeh Henry</span>
-            <span className="ml-1">
-              <svg className="w-5 h-5" viewBox="0 0 17 17" fill="none">
-                <path
-                  d="M7.66691 2.62178C8.12691 2.22845 8.88025 2.22845 9.34691 2.62178L10.4002 3.52845C10.6002 3.70178 10.9736 3.84178 11.2402 3.84178H12.3736C13.0802 3.84178 13.6602 4.42178 13.6602 5.12845V6.26178C13.6602 6.52178 13.8002 6.90178 13.9736 7.10178L14.8802 8.15512C15.2736 8.61512 15.2736 9.36845 14.8802 9.83512L13.9736 10.8884C13.8002 11.0884 13.6602 11.4618 13.6602 11.7284V12.8618C13.6602 13.5684 13.0802 14.1484 12.3736 14.1484H11.2402C10.9802 14.1484 10.6002 14.2884 10.4002 14.4618L9.34691 15.3684C8.88691 15.7618 8.13358 15.7618 7.66691 15.3684L6.61358 14.4618C6.41358 14.2884 6.04025 14.1484 5.77358 14.1484H4.62025C3.91358 14.1484 3.33358 13.5684 3.33358 12.8618V11.7218C3.33358 11.4618 3.19358 11.0884 3.02691 10.8884L2.12691 9.82845C1.74025 9.36845 1.74025 8.62178 2.12691 8.16178L3.02691 7.10178C3.19358 6.90178 3.33358 6.52845 3.33358 6.26845V5.12178C3.33358 4.41512 3.91358 3.83512 4.62025 3.83512H5.77358C6.03358 3.83512 6.41358 3.69512 6.61358 3.52178L7.66691 2.62178Z"
-                  fill="#38BDF8"
-                  stroke="#38BDF8"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6.08691 8.98833L7.69358 10.6017L10.9136 7.375"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </h2>
-          <span className="block mt-0.5 text-sm ">
-            <span className="font-medium">12.321</span>
-            <span className="ml-1.5 text-neutral-500 dark:text-neutral-400">
-              ETH
-            </span>
-          </span>
-        </div>
-        <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm font-medium px-4 py-2 min-w-[84px]  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 relative z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
-          Songs
-        </button>
-      </div>
-    </div>
-    <a className="absolute inset-0" href="/ciscryp/page-author" />
-  </div>
-  <div
-    className="nc-CardAuthorBox4 relative flex flex-col overflow-hidden group dark:bg-neutral-800 group rounded-3xl hover:shadow-xl transition-shadow "
-    data-nc-id="CardAuthorBox4"
-  >
-    <div className="relative flex-shrink-0 h-36">
-      <div
-        className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"
-        data-nc-id="NcImage"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1618172193622-ae2d025f4032?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-          className="object-cover w-full h-full"
-          alt="nc-imgs"
-        />
-      </div>
-    </div>
-    <div className="pb-5 px-4 pt-1.5">
-      <div className="text-center relative flex items-center justify-center ">
-        <div className="relative">
-          <svg
-            className="mx-auto h-14 -mt-[38px] dark:text-neutral-800 dark:group-hover:text-neutral-800"
-            width={134}
-            height={54}
-            viewBox="0 0 134 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M101.734 19.8581C99.2658 17.4194 96.9737 14.8065 94.5052 12.1935C94.1526 11.671 93.6237 11.3226 93.0947 10.8C92.7421 10.4516 92.5658 10.2774 92.2131 9.92903C85.6895 3.83226 76.6974 0 67 0C57.3026 0 48.3105 3.83226 41.6105 9.92903C41.2579 10.2774 41.0816 10.4516 40.7289 10.8C40.2 11.3226 39.8474 11.671 39.3184 12.1935C36.85 14.8065 34.5579 17.4194 32.0895 19.8581C23.2737 28.7419 11.4605 30.4839 -0.176331 30.8323V54H16.3974H32.0895H101.558H110.197H134V30.6581C122.363 30.3097 110.55 28.7419 101.734 19.8581Z"
-              fill="currentColor"
-            />
-          </svg>
-          <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-            <div className="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-12 h-12 text-2xl ">
-              <img
-                className="absolute inset-0 w-full h-full object-cover rounded-full"
-                src="/author3.png"
-                alt="John Doe"
-              />
-              <span className="wil-avatar__name">J</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-2.5 flex items-start items-center justify-between">
-        <div>
-          <h2 className="text-base font-medium flex items-center">
-            <span className="">Belinda Rer</span>
-            <span className="ml-1">
-              <svg className="w-5 h-5" viewBox="0 0 17 17" fill="none">
-                <path
-                  d="M7.66691 2.62178C8.12691 2.22845 8.88025 2.22845 9.34691 2.62178L10.4002 3.52845C10.6002 3.70178 10.9736 3.84178 11.2402 3.84178H12.3736C13.0802 3.84178 13.6602 4.42178 13.6602 5.12845V6.26178C13.6602 6.52178 13.8002 6.90178 13.9736 7.10178L14.8802 8.15512C15.2736 8.61512 15.2736 9.36845 14.8802 9.83512L13.9736 10.8884C13.8002 11.0884 13.6602 11.4618 13.6602 11.7284V12.8618C13.6602 13.5684 13.0802 14.1484 12.3736 14.1484H11.2402C10.9802 14.1484 10.6002 14.2884 10.4002 14.4618L9.34691 15.3684C8.88691 15.7618 8.13358 15.7618 7.66691 15.3684L6.61358 14.4618C6.41358 14.2884 6.04025 14.1484 5.77358 14.1484H4.62025C3.91358 14.1484 3.33358 13.5684 3.33358 12.8618V11.7218C3.33358 11.4618 3.19358 11.0884 3.02691 10.8884L2.12691 9.82845C1.74025 9.36845 1.74025 8.62178 2.12691 8.16178L3.02691 7.10178C3.19358 6.90178 3.33358 6.52845 3.33358 6.26845V5.12178C3.33358 4.41512 3.91358 3.83512 4.62025 3.83512H5.77358C6.03358 3.83512 6.41358 3.69512 6.61358 3.52178L7.66691 2.62178Z"
-                  fill="#38BDF8"
-                  stroke="#38BDF8"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6.08691 8.98833L7.69358 10.6017L10.9136 7.375"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </h2>
-          <span className="block mt-0.5 text-sm ">
-            <span className="font-medium">12.321</span>
-            <span className="ml-1.5 text-neutral-500 dark:text-neutral-400">
-              ETH
-            </span>
-          </span>
-        </div>
-        <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm font-medium px-4 py-2 min-w-[84px]  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 relative z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
-          Songs
-        </button>
-      </div>
-    </div>
-    <a className="absolute inset-0" href="/ciscryp/page-author" />
-  </div>
-  <div
-    className="nc-CardAuthorBox4 relative flex flex-col overflow-hidden group dark:bg-neutral-800 group rounded-3xl hover:shadow-xl transition-shadow "
-    data-nc-id="CardAuthorBox4"
-  >
-    <div className="relative flex-shrink-0 h-36">
-      <div
-        className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"
-        data-nc-id="NcImage"
-      >
-        <img
-          src="https://images.pexels.com/photos/2441454/pexels-photo-2441454.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          className="object-cover w-full h-full"
-          alt="nc-imgs"
-        />
-      </div>
-    </div>
-    <div className="pb-5 px-4 pt-1.5">
-      <div className="text-center relative flex items-center justify-center ">
-        <div className="relative">
-          <svg
-            className="mx-auto h-14 -mt-[38px] dark:text-neutral-800 dark:group-hover:text-neutral-800"
-            width={134}
-            height={54}
-            viewBox="0 0 134 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M101.734 19.8581C99.2658 17.4194 96.9737 14.8065 94.5052 12.1935C94.1526 11.671 93.6237 11.3226 93.0947 10.8C92.7421 10.4516 92.5658 10.2774 92.2131 9.92903C85.6895 3.83226 76.6974 0 67 0C57.3026 0 48.3105 3.83226 41.6105 9.92903C41.2579 10.2774 41.0816 10.4516 40.7289 10.8C40.2 11.3226 39.8474 11.671 39.3184 12.1935C36.85 14.8065 34.5579 17.4194 32.0895 19.8581C23.2737 28.7419 11.4605 30.4839 -0.176331 30.8323V54H16.3974H32.0895H101.558H110.197H134V30.6581C122.363 30.3097 110.55 28.7419 101.734 19.8581Z"
-              fill="currentColor"
-            />
-          </svg>
-          <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-            <div className="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-12 h-12 text-2xl ">
-              <img
-                className="absolute inset-0 w-full h-full object-cover rounded-full"
-                src="/author3.png"
-                alt="John Doe"
-              />
-              <span className="wil-avatar__name">J</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-2.5 flex items-start items-center justify-between">
-        <div>
-          <h2 className="text-base font-medium flex items-center">
-            <span className="">Evie Osborn</span>
-            <span className="ml-1">
-              <svg className="w-5 h-5" viewBox="0 0 17 17" fill="none">
-                <path
-                  d="M7.66691 2.62178C8.12691 2.22845 8.88025 2.22845 9.34691 2.62178L10.4002 3.52845C10.6002 3.70178 10.9736 3.84178 11.2402 3.84178H12.3736C13.0802 3.84178 13.6602 4.42178 13.6602 5.12845V6.26178C13.6602 6.52178 13.8002 6.90178 13.9736 7.10178L14.8802 8.15512C15.2736 8.61512 15.2736 9.36845 14.8802 9.83512L13.9736 10.8884C13.8002 11.0884 13.6602 11.4618 13.6602 11.7284V12.8618C13.6602 13.5684 13.0802 14.1484 12.3736 14.1484H11.2402C10.9802 14.1484 10.6002 14.2884 10.4002 14.4618L9.34691 15.3684C8.88691 15.7618 8.13358 15.7618 7.66691 15.3684L6.61358 14.4618C6.41358 14.2884 6.04025 14.1484 5.77358 14.1484H4.62025C3.91358 14.1484 3.33358 13.5684 3.33358 12.8618V11.7218C3.33358 11.4618 3.19358 11.0884 3.02691 10.8884L2.12691 9.82845C1.74025 9.36845 1.74025 8.62178 2.12691 8.16178L3.02691 7.10178C3.19358 6.90178 3.33358 6.52845 3.33358 6.26845V5.12178C3.33358 4.41512 3.91358 3.83512 4.62025 3.83512H5.77358C6.03358 3.83512 6.41358 3.69512 6.61358 3.52178L7.66691 2.62178Z"
-                  fill="#38BDF8"
-                  stroke="#38BDF8"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6.08691 8.98833L7.69358 10.6017L10.9136 7.375"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </h2>
-          <span className="block mt-0.5 text-sm ">
-            <span className="font-medium">12.321</span>
-            <span className="ml-1.5 text-neutral-500 dark:text-neutral-400">
-              ETH
-            </span>
-          </span>
-        </div>
-        <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm font-medium px-4 py-2 min-w-[84px]  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 relative z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
-          <span className="text-sm ">Songs</span>
-        </button>
-      </div>
-    </div>
-    <a className="absolute inset-0" />
-  </div>
-  <div
-    className="nc-CardAuthorBox4 relative flex flex-col overflow-hidden group dark:bg-neutral-800 group rounded-3xl hover:shadow-xl transition-shadow "
-    data-nc-id="CardAuthorBox4"
-  >
-    <div className="relative flex-shrink-0 h-36">
-      <div
-        className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"
-        data-nc-id="NcImage"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1626282874430-c11ae32d2898?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-          className="object-cover w-full h-full"
-          alt="nc-imgs"
-        />
-      </div>
-    </div>
-    <div className="pb-5 px-4 pt-1.5">
-      <div className="text-center relative flex items-center justify-center ">
-        <div className="relative">
-          <svg
-            className="mx-auto h-14 -mt-[38px] dark:text-neutral-800 dark:group-hover:text-neutral-800"
-            width={134}
-            height={54}
-            viewBox="0 0 134 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M101.734 19.8581C99.2658 17.4194 96.9737 14.8065 94.5052 12.1935C94.1526 11.671 93.6237 11.3226 93.0947 10.8C92.7421 10.4516 92.5658 10.2774 92.2131 9.92903C85.6895 3.83226 76.6974 0 67 0C57.3026 0 48.3105 3.83226 41.6105 9.92903C41.2579 10.2774 41.0816 10.4516 40.7289 10.8C40.2 11.3226 39.8474 11.671 39.3184 12.1935C36.85 14.8065 34.5579 17.4194 32.0895 19.8581C23.2737 28.7419 11.4605 30.4839 -0.176331 30.8323V54H16.3974H32.0895H101.558H110.197H134V30.6581C122.363 30.3097 110.55 28.7419 101.734 19.8581Z"
-              fill="currentColor"
-            />
-          </svg>
-          <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-            <div className="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-12 h-12 text-2xl ">
-              <img
-                className="absolute inset-0 w-full h-full object-cover rounded-full"
-                src="/author3.png"
-                alt="John Doe"
-              />
-              <span className="wil-avatar__name">J</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-2.5 flex items-start items-center justify-between">
-        <div>
-          <h2 className="text-base font-medium flex items-center">
-            <span className="">Karli Costa</span>
-            <span className="ml-1">
-              <svg className="w-5 h-5" viewBox="0 0 17 17" fill="none">
-                <path
-                  d="M7.66691 2.62178C8.12691 2.22845 8.88025 2.22845 9.34691 2.62178L10.4002 3.52845C10.6002 3.70178 10.9736 3.84178 11.2402 3.84178H12.3736C13.0802 3.84178 13.6602 4.42178 13.6602 5.12845V6.26178C13.6602 6.52178 13.8002 6.90178 13.9736 7.10178L14.8802 8.15512C15.2736 8.61512 15.2736 9.36845 14.8802 9.83512L13.9736 10.8884C13.8002 11.0884 13.6602 11.4618 13.6602 11.7284V12.8618C13.6602 13.5684 13.0802 14.1484 12.3736 14.1484H11.2402C10.9802 14.1484 10.6002 14.2884 10.4002 14.4618L9.34691 15.3684C8.88691 15.7618 8.13358 15.7618 7.66691 15.3684L6.61358 14.4618C6.41358 14.2884 6.04025 14.1484 5.77358 14.1484H4.62025C3.91358 14.1484 3.33358 13.5684 3.33358 12.8618V11.7218C3.33358 11.4618 3.19358 11.0884 3.02691 10.8884L2.12691 9.82845C1.74025 9.36845 1.74025 8.62178 2.12691 8.16178L3.02691 7.10178C3.19358 6.90178 3.33358 6.52845 3.33358 6.26845V5.12178C3.33358 4.41512 3.91358 3.83512 4.62025 3.83512H5.77358C6.03358 3.83512 6.41358 3.69512 6.61358 3.52178L7.66691 2.62178Z"
-                  fill="#38BDF8"
-                  stroke="#38BDF8"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6.08691 8.98833L7.69358 10.6017L10.9136 7.375"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </h2>
-          <span className="block mt-0.5 text-sm ">
-            <span className="font-medium">12.321</span>
-            <span className="ml-1.5 text-neutral-500 dark:text-neutral-400">
-              ETH
-            </span>
-          </span>
-        </div>
-        <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm font-medium px-4 py-2 min-w-[84px]  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 relative z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
-          <span className="text-sm ">Songs</span>
-        </button>
-      </div>
-    </div>
-    <a className="absolute inset-0" href="/ciscryp/page-author" />
-  </div>
-  <div
-    className="nc-CardAuthorBox4 relative flex flex-col overflow-hidden group dark:bg-neutral-800 group rounded-3xl hover:shadow-xl transition-shadow "
-    data-nc-id="CardAuthorBox4"
-  >
-    <div className="relative flex-shrink-0 h-36">
-      <div
-        className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"
-        data-nc-id="NcImage"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1620503374956-c942862f0372?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-          className="object-cover w-full h-full"
-          alt="nc-imgs"
-        />
-      </div>
-    </div>
-    <div className="pb-5 px-4 pt-1.5">
-      <div className="text-center relative flex items-center justify-center ">
-        <div className="relative">
-          <svg
-            className="mx-auto h-14 -mt-[38px] dark:text-neutral-800 dark:group-hover:text-neutral-800"
-            width={134}
-            height={54}
-            viewBox="0 0 134 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M101.734 19.8581C99.2658 17.4194 96.9737 14.8065 94.5052 12.1935C94.1526 11.671 93.6237 11.3226 93.0947 10.8C92.7421 10.4516 92.5658 10.2774 92.2131 9.92903C85.6895 3.83226 76.6974 0 67 0C57.3026 0 48.3105 3.83226 41.6105 9.92903C41.2579 10.2774 41.0816 10.4516 40.7289 10.8C40.2 11.3226 39.8474 11.671 39.3184 12.1935C36.85 14.8065 34.5579 17.4194 32.0895 19.8581C23.2737 28.7419 11.4605 30.4839 -0.176331 30.8323V54H16.3974H32.0895H101.558H110.197H134V30.6581C122.363 30.3097 110.55 28.7419 101.734 19.8581Z"
-              fill="currentColor"
-            />
-          </svg>
-          <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-            <div className="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-12 h-12 text-2xl ">
-              <img
-                className="absolute inset-0 w-full h-full object-cover rounded-full"
-                src="author3.png"
-                alt="John Doe"
-              />
-              <span className="wil-avatar__name">J</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-2.5 flex items-start items-center justify-between">
-        <div>
-          <h2 className="text-base font-medium flex items-center">
-            <span className="">Mireya Roman</span>
-            <span className="ml-1">
-              <svg className="w-5 h-5" viewBox="0 0 17 17" fill="none">
-                <path
-                  d="M7.66691 2.62178C8.12691 2.22845 8.88025 2.22845 9.34691 2.62178L10.4002 3.52845C10.6002 3.70178 10.9736 3.84178 11.2402 3.84178H12.3736C13.0802 3.84178 13.6602 4.42178 13.6602 5.12845V6.26178C13.6602 6.52178 13.8002 6.90178 13.9736 7.10178L14.8802 8.15512C15.2736 8.61512 15.2736 9.36845 14.8802 9.83512L13.9736 10.8884C13.8002 11.0884 13.6602 11.4618 13.6602 11.7284V12.8618C13.6602 13.5684 13.0802 14.1484 12.3736 14.1484H11.2402C10.9802 14.1484 10.6002 14.2884 10.4002 14.4618L9.34691 15.3684C8.88691 15.7618 8.13358 15.7618 7.66691 15.3684L6.61358 14.4618C6.41358 14.2884 6.04025 14.1484 5.77358 14.1484H4.62025C3.91358 14.1484 3.33358 13.5684 3.33358 12.8618V11.7218C3.33358 11.4618 3.19358 11.0884 3.02691 10.8884L2.12691 9.82845C1.74025 9.36845 1.74025 8.62178 2.12691 8.16178L3.02691 7.10178C3.19358 6.90178 3.33358 6.52845 3.33358 6.26845V5.12178C3.33358 4.41512 3.91358 3.83512 4.62025 3.83512H5.77358C6.03358 3.83512 6.41358 3.69512 6.61358 3.52178L7.66691 2.62178Z"
-                  fill="#38BDF8"
-                  stroke="#38BDF8"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6.08691 8.98833L7.69358 10.6017L10.9136 7.375"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </h2>
-          <span className="block mt-0.5 text-sm ">
-            <span className="font-medium">12.321</span>
-            <span className="ml-1.5 text-neutral-500 dark:text-neutral-400">
-              ETH
-            </span>
-          </span>
-        </div>
-        <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm font-medium px-4 py-2 min-w-[84px]  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 relative z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
-          Songs
-        </button>
-      </div>
-    </div>
-    <a className="absolute inset-0" href="/ciscryp/page-author" />
-  </div>
-  <div
-    className="nc-CardAuthorBox4 relative flex flex-col overflow-hidden group dark:bg-neutral-800 group rounded-3xl hover:shadow-xl transition-shadow "
-    data-nc-id="CardAuthorBox4"
-  >
-    <div className="relative flex-shrink-0 h-36">
-      <div
-        className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"
-        data-nc-id="NcImage"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1573096108468-702f6014ef28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-          className="object-cover w-full h-full"
-          alt="nc-imgs"
-        />
-      </div>
-    </div>
-    <div className="pb-5 px-4 pt-1.5">
-      <div className="text-center relative flex items-center justify-center ">
-        <div className="relative">
-          <svg
-            className="mx-auto h-14 -mt-[38px] dark:text-neutral-800 dark:group-hover:text-neutral-800"
-            width={134}
-            height={54}
-            viewBox="0 0 134 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M101.734 19.8581C99.2658 17.4194 96.9737 14.8065 94.5052 12.1935C94.1526 11.671 93.6237 11.3226 93.0947 10.8C92.7421 10.4516 92.5658 10.2774 92.2131 9.92903C85.6895 3.83226 76.6974 0 67 0C57.3026 0 48.3105 3.83226 41.6105 9.92903C41.2579 10.2774 41.0816 10.4516 40.7289 10.8C40.2 11.3226 39.8474 11.671 39.3184 12.1935C36.85 14.8065 34.5579 17.4194 32.0895 19.8581C23.2737 28.7419 11.4605 30.4839 -0.176331 30.8323V54H16.3974H32.0895H101.558H110.197H134V30.6581C122.363 30.3097 110.55 28.7419 101.734 19.8581Z"
-              fill="currentColor"
-            />
-          </svg>
-          <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-            <div className="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-12 h-12 text-2xl ">
-              <img
-                className="absolute inset-0 w-full h-full object-cover rounded-full"
-                src="/author3.png"
-                alt="John Doe"
-              />
-              <span className="wil-avatar__name">J</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-2.5 flex items-start items-center justify-between">
-        <div>
-          <h2 className="text-base font-medium flex items-center">
-            <span className="">Giada Mann</span>
-            <span className="ml-1">
-              <svg className="w-5 h-5" viewBox="0 0 17 17" fill="none">
-                <path
-                  d="M7.66691 2.62178C8.12691 2.22845 8.88025 2.22845 9.34691 2.62178L10.4002 3.52845C10.6002 3.70178 10.9736 3.84178 11.2402 3.84178H12.3736C13.0802 3.84178 13.6602 4.42178 13.6602 5.12845V6.26178C13.6602 6.52178 13.8002 6.90178 13.9736 7.10178L14.8802 8.15512C15.2736 8.61512 15.2736 9.36845 14.8802 9.83512L13.9736 10.8884C13.8002 11.0884 13.6602 11.4618 13.6602 11.7284V12.8618C13.6602 13.5684 13.0802 14.1484 12.3736 14.1484H11.2402C10.9802 14.1484 10.6002 14.2884 10.4002 14.4618L9.34691 15.3684C8.88691 15.7618 8.13358 15.7618 7.66691 15.3684L6.61358 14.4618C6.41358 14.2884 6.04025 14.1484 5.77358 14.1484H4.62025C3.91358 14.1484 3.33358 13.5684 3.33358 12.8618V11.7218C3.33358 11.4618 3.19358 11.0884 3.02691 10.8884L2.12691 9.82845C1.74025 9.36845 1.74025 8.62178 2.12691 8.16178L3.02691 7.10178C3.19358 6.90178 3.33358 6.52845 3.33358 6.26845V5.12178C3.33358 4.41512 3.91358 3.83512 4.62025 3.83512H5.77358C6.03358 3.83512 6.41358 3.69512 6.61358 3.52178L7.66691 2.62178Z"
-                  fill="#38BDF8"
-                  stroke="#38BDF8"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6.08691 8.98833L7.69358 10.6017L10.9136 7.375"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </h2>
-          <span className="block mt-0.5 text-sm ">
-            <span className="font-medium">12.321</span>
-            <span className="ml-1.5 text-neutral-500 dark:text-neutral-400">
-              ETH
-            </span>
-          </span>
-        </div>
-        <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm font-medium px-4 py-2 min-w-[84px]  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 relative z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
-          Songs
-        </button>
-      </div>
-    </div>
-    <a className="absolute inset-0" href="/ciscryp/page-author" />
-  </div>
-</div>
+          <div className="relative flex-shrink-0 h-36">
 
+            <div
+              className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"
+              data-nc-id="NcImage"
+            >
+              <img
+                src="https://images.pexels.com/photos/4800161/pexels-photo-4800161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                className="object-cover w-full h-full"
+                alt="nc-imgs"
+              />
+            </div>
+          </div>
+          <div className="pb-5 px-4 pt-1.5">
+            <div className="text-center relative flex items-center justify-center ">
+              <div className="relative">
+                <svg
+                  className="mx-auto h-14 -mt-[38px] dark:text-neutral-800 dark:group-hover:text-neutral-800"
+                  width={134}
+                  height={54}
+                  viewBox="0 0 134 54"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M101.734 19.8581C99.2658 17.4194 96.9737 14.8065 94.5052 12.1935C94.1526 11.671 93.6237 11.3226 93.0947 10.8C92.7421 10.4516 92.5658 10.2774 92.2131 9.92903C85.6895 3.83226 76.6974 0 67 0C57.3026 0 48.3105 3.83226 41.6105 9.92903C41.2579 10.2774 41.0816 10.4516 40.7289 10.8C40.2 11.3226 39.8474 11.671 39.3184 12.1935C36.85 14.8065 34.5579 17.4194 32.0895 19.8581C23.2737 28.7419 11.4605 30.4839 -0.176331 30.8323V54H16.3974H32.0895H101.558H110.197H134V30.6581C122.363 30.3097 110.55 28.7419 101.734 19.8581Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <div className="absolute -top-7 left-1/2 -translate-x-1/2">
+                  <div className="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-12 h-12 text-2xl ">
+                    <img
+                      className="absolute inset-0 w-full h-full object-cover rounded-full"
+                      src="/author3.png"
+                      alt="John Doe"
+                    />
+                    <span className="wil-avatar__name">J</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-2.5 flex items-start items-center justify-between">
+              <div>
+                <h2 className="text-base font-medium flex items-center">
+                  <span className="text-white">{shortenAddress(data.address)}</span>
+                  <span className="ml-1">
+                    <svg className="w-5 h-5" viewBox="0 0 17 17" fill="none">
+                      <path
+                        d="M7.66691 2.62178C8.12691 2.22845 8.88025 2.22845 9.34691 2.62178L10.4002 3.52845C10.6002 3.70178 10.9736 3.84178 11.2402 3.84178H12.3736C13.0802 3.84178 13.6602 4.42178 13.6602 5.12845V6.26178C13.6602 6.52178 13.8002 6.90178 13.9736 7.10178L14.8802 8.15512C15.2736 8.61512 15.2736 9.36845 14.8802 9.83512L13.9736 10.8884C13.8002 11.0884 13.6602 11.4618 13.6602 11.7284V12.8618C13.6602 13.5684 13.0802 14.1484 12.3736 14.1484H11.2402C10.9802 14.1484 10.6002 14.2884 10.4002 14.4618L9.34691 15.3684C8.88691 15.7618 8.13358 15.7618 7.66691 15.3684L6.61358 14.4618C6.41358 14.2884 6.04025 14.1484 5.77358 14.1484H4.62025C3.91358 14.1484 3.33358 13.5684 3.33358 12.8618V11.7218C3.33358 11.4618 3.19358 11.0884 3.02691 10.8884L2.12691 9.82845C1.74025 9.36845 1.74025 8.62178 2.12691 8.16178L3.02691 7.10178C3.19358 6.90178 3.33358 6.52845 3.33358 6.26845V5.12178C3.33358 4.41512 3.91358 3.83512 4.62025 3.83512H5.77358C6.03358 3.83512 6.41358 3.69512 6.61358 3.52178L7.66691 2.62178Z"
+                        fill="#38BDF8"
+                        stroke="#38BDF8"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M6.08691 8.98833L7.69358 10.6017L10.9136 7.375"
+                        stroke="white"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </h2>
 
-      { /* here */ }
+              </div>
+              <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm font-medium px-4 py-2 min-w-[84px]  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 relative z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
+                Songs
+              </button>
+            </div>
+          </div>
+          <a className="absolute inset-0"  />
+          </div>
+
+          )
+          ) }
+
+      </div>
+
+          {/* heretwo */}
 
 
 
@@ -1093,4 +369,30 @@ export default function Artists() {
         <Secondsection />
     </div>
   )
+}
+
+
+
+
+export async function  getStaticProps() {
+
+  const getartists = await fetch(`https://streamifi-backend.herokuapp.com/users`, 
+  {
+      method: 'GET',   
+      headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+      },
+  }
+);
+const value = await getartists.json();
+
+
+
+  return {
+    props: {
+      creators : value.user
+    }
+  }
+  
 }

@@ -207,3 +207,40 @@ export default function Artistsongs() {
     </div>
   )
 }
+
+
+
+
+/*
+export async function  getServerSideProps(context) {
+
+    const {params, query} = context;
+    const { Purchasetokens, musictype } = params;
+    //const {musictype} = query;
+  
+    console.log(params);
+    console.log(params.Purchasetokens[0], "checking");
+  
+    console.log(params.Purchasetokens[1], "firstTry");
+  
+    //console.log(Purchasetokens);
+  
+    const itemId = params.Purchasetokens[0];
+    const itemType = params.Purchasetokens[1];
+  
+    console.log(itemId);
+    console.log(itemType);
+  
+  
+  
+    return {
+      props: {
+        itemId : itemId,
+        itemType: itemType,
+      }
+    }
+    
+  }
+
+
+  */
