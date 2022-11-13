@@ -124,6 +124,8 @@ export default function Itemsale(props) {
       //first update sellers sold
       if(checkseller.users !== null){
           console.log(checkseller);
+        
+          /*
            await fetch(`https://streamifi-backend.herokuapp.com/user/sold`, 
           {
             method: 'POST',   
@@ -134,8 +136,13 @@ export default function Itemsale(props) {
             body: JSON.stringify({ address: sellersaddress})
           }
           );
+          */
           // const update = await updatesellersaccount;
            // console.log(update);
+
+           const  updateseller = await fetch(`https://streamifi-backend.herokuapp.com/user/sold/${sellersaddress}`, { method: 'GET' })
+           const update = await updateseller.json();
+           console.log(update, "one");
           
 
       } else {
@@ -155,11 +162,13 @@ export default function Itemsale(props) {
 
 
       //calling normal database and creating user for buying if theres no account
+
       if( checkuserbuyer.users !== null ){
 
           console.log("evaluated to true");
           console.log("Hey Hey");
-
+          
+          /*
            await fetch(`https://streamifi-backend.herokuapp.com/user/bought`, 
           {
             method: 'POST',   
@@ -170,10 +179,14 @@ export default function Itemsale(props) {
             body: JSON.stringify({ address: address})
           }
           );
+          */
           //const checksuccede = await addbought;
           //console.log(checksuccede);
           /* use checksuccede to notify the user that their transaction has been saved it returns true if it was successfull or false if it was bad*/
-         //await checksuccede;
+          const  updatebuyer = await fetch(`https://streamifi-backend.herokuapp.com/user/bought/${address}`, { method: 'GET' })
+          const update = await updatebuyer.json();
+          console.log(update, "two");
+
 
       } else {
           //create buyer user
