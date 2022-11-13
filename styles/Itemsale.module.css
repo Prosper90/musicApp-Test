@@ -68,7 +68,7 @@
 
 
 .songname {
-    background: #18181C;
+   /* background: #18181C; */
     box-shadow: 4px 4px 20px -10px rgb(0 0 0 / 10%);
     border-radius: 6px;
     height: 39px;
@@ -79,6 +79,7 @@
     align-items: center;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 13px;
+    background-color: #1F2937;
 }
 
 
@@ -231,7 +232,7 @@
     /* flex-direction: column; */
     justify-content: center;
     gap: 20px;
-    background: #211F27;
+   /* background: #211F27; */
     padding: 10px;
     border-radius: 12px;
     height: 143px;
@@ -256,8 +257,8 @@
 
 .buybutton:hover {
     color: #FFFFFF;
-    background: #3647E1;
-    border: 1px solid #3647E1;
+    background: #0d6efd;
+    border: 1px solid #0d6efd;
 }
 
 
@@ -268,13 +269,14 @@
     height: 50px;
     border: none;
     outline: none;
-    background: #3647E1;
+   /* background: #3647E1; */
     border-radius: 10px;
     /* border: 1px solid; */
     -o-border-image: linear-gradient(270.24deg, #40C9FF -1.44%, #E81CFF 99.82%) 1;
     /* border-image: linear-gradient(270.24deg, #40C9FF -1.44%, #E81CFF 99.82%) 1; */
     color: #FFFFFF;
     cursor: pointer;
+    background: #0d6efd;
 }
 
 

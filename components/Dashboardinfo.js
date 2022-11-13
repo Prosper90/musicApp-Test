@@ -38,12 +38,12 @@ export default function Dashboardinfo(props) {
 
             const values = await fetch(`https://streamifi-backend.herokuapp.com/user/${address}`, { method: 'GET' })
             const borroweddata = await values.json();
-            console.log(borroweddata.user, "dashboard values")
-            if(borroweddata.user) {
-                setSold(borroweddata.user.sold);
-                setBought(borroweddata.user.bought);
-                setProfits(borroweddata.user.profits);
-                setBorrowamount(borroweddata.user.borrowamount);
+            console.log(borroweddata.users, "dashboard values")
+            if(borroweddata.users) {
+                setSold(borroweddata.users.sold);
+                setBought(borroweddata.users.bought);
+                setProfits(borroweddata.users.profits);
+                setBorrowamount(borroweddata.users.borrowamount);
                 setValuesgotten(true);
             }
             

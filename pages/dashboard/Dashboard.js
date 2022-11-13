@@ -9,6 +9,7 @@ import Itemsinfo from 'components/Itemsinfo';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {ethers} from "ethers";
 import { contractaddress, contractABI, chainID } from "../../components/utils/constants";
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 export default function Purchasetokens() {

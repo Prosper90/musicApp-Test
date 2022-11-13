@@ -3,7 +3,9 @@ import currencyabi from "./currencyTokenABI.json";
 
 
 
-export const contractaddress = "0xF92915c0f2E350882379f15CdA84FAC34E7aDCAd";
+export const contractaddress = "0xf2a9BCa0A982D2453c0DD32C38995f741c7C7a73";
+
+//use 0xF92915c0f2E350882379f15CdA84FAC34E7aDCAd
 
 //test  before 0xAa181B1fb8F89cb21d98bA7BECDe6E3b277AFB64
 
